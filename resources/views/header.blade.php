@@ -17,6 +17,8 @@
             }
         }
     </style>
+    {{-- anime on scroll --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 </head>
 
 <body>
@@ -79,13 +81,13 @@
             <div class="navbar-collapse collapse justify-content-center custom-bg p-3 p-md-0" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" class="text-dark text-decoration-none me-3" style="font-size:12px">Home
+                        <a href="/" class="text-dark text-decoration-none me-3" style="font-size:12px">Home
                             <span class="ms-3 text-muted d-none d-md-inline">|</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="text-dark text-decoration-none me-3" style="font-size:12px">About Us
+                        <a href="/about-us" class="text-dark text-decoration-none me-3" style="font-size:12px">About Us
                             <span class="ms-3 text-muted d-none d-md-inline">|</span>
                         </a>
                     </li>
@@ -109,7 +111,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="text-dark text-decoration-none" style="font-size:12px">Linage</a>
+                        <a href="/linage" class="text-dark text-decoration-none" style="font-size:12px">Linage</a>
                     </li>
                 </ul>
                 {{-- hides the btn on l=md and lg screens but displays on collapse --}}

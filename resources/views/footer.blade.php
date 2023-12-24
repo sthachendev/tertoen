@@ -22,6 +22,9 @@
             flex: 1;
         }
     </style>
+
+    {{-- anime js --}}
+    {{-- <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script> --}}
 </head>
 
 <body>
@@ -30,7 +33,7 @@
         <div class="container">
             <div class="row p-3">
                 <!-- Left side with text logo and social media icons -->
-                <div class="col-md-6 text-md-start mb-3 mb-md-0">
+                <div class="col-md-6 text-md-start mb-3 mb-md-0" id="text-logo" data-aos="fade-right">
                     <span class="fw-bold fs-4 text-light">
                         BAYUEL KINZANG YOESEL
                         <br>
@@ -77,7 +80,7 @@
                 </div>
 
                 <!-- Right side with quick links -->
-                <div class="col-md-6 text-md-end" style="background:#4F5B9E">
+                <div class="col-md-6 text-md-end" style="background:#4F5B9E" data-aos="fade-left">
                     <div class="d-flex justify-content-around p-3">
 
                         <div class="d-flex flex-column p-3 text-start">
@@ -114,8 +117,10 @@
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

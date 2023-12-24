@@ -17,3 +17,11 @@ Route::get('/', function () {
     return view('home');
     // return view('welcome');
 });
+
+Route::get('/linage', function () {
+    return view('linage');
+});
+
+Route::get('/about-us', function () {
+    return view('about_us');
+});

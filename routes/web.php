@@ -31,4 +31,12 @@ Route::get('/gallery', function () {
     return view('gallery');
 });
 
+Route::get('/centres', function () {
+    return view('centres');
+});
+
+Route::get('/activities', function () {
+    return view('activities');
+});
+
 Route::post('/images', [ImageController::class, 'store'])->name('images.store');

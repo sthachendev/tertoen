@@ -93,13 +93,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="text-dark text-decoration-none me-3" style="font-size:12px">Center
+                        <a href="/centres" class="text-dark text-decoration-none me-3" style="font-size:12px">Centres
                             <span class="ms-3 text-muted d-none d-md-inline">|</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="text-dark text-decoration-none me-3" style="font-size:12px">Activities
+                        <a href="/activities" class="text-dark text-decoration-none me-3" style="font-size:12px">Activities
                             <span class="ms-3 text-muted d-none d-md-inline">|</span>
                         </a>
                     </li>

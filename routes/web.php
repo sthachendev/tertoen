@@ -2,7 +2,7 @@
 
 use App\Models\Gallery;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ImageController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GalleryController;
 
 /*
@@ -18,6 +18,11 @@ use App\Http\Controllers\GalleryController;
 
 Route::get('/', function () {
     return view('home');
+    // return view('welcome');
+});
+
+Route::get('/admin/login', function () {
+    return view('admin.login');
     // return view('welcome');
 });
 
@@ -46,4 +51,15 @@ Route::get('/membership', function () {
     return view('membership');
 });
 
+Route::get('/admin/events', function () {
+    return view('admin.events');
+});
+
+Route::get('/admin/gallery', function () {
+    $images = Gallery::all();
+    return view('admin.gallery', compact('images'));
+});
+
 Route::post('/products', [GalleryController::class, 'add'])->name('img.add');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

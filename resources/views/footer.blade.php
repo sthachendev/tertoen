@@ -77,8 +77,10 @@
                         </a>
                     </div>
                     <div class="my-4 d-flex">
-                        <!-- Add your social media icons here -->
                         <a href="/membership" class="text-light text-decoration-none">Apply for membership</a>
+                    </div>
+                    <div class="my-4 d-flex">
+                        <a href="/admin/login" class="text-light text-decoration-none">Admin login</a>
                     </div>
                 </div>
 

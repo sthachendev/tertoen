@@ -19,8 +19,8 @@
     @Include('header')
 
     {{-- about us content --}}
-    <img src="{{ asset('images/monastry.jpg') }}" alt="logo" class="mx-5" data-aos="fade-right" data-aos-easing="ease"
-        data-aos-duration="1000">
+    {{-- <img src="{{ asset('images/monastry.jpg') }}" alt="logo" class="mx-5" data-aos="fade-right" data-aos-easing="ease"
+        data-aos-duration="1000"> --}}
 
     <h4 id="title" class="text-center my-3" data-aos="fade-right">
         BAYUEL KINZANG YOESEL CHOLING FOUNDATION

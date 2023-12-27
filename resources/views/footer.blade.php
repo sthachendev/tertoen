@@ -39,7 +39,7 @@
                         <br>
                         CHOLING FOUNDATION
                     </span>
-                    <div class="mt-2 d-flex">
+                    <div class="my-4 d-flex">
                         <!-- Add your social media icons here -->
                         <a href="https://www.facebook.com/YourFacebookPage"
                             class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
@@ -75,7 +75,10 @@
                             rel="noopener noreferrer">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-
+                    </div>
+                    <div class="my-4 d-flex">
+                        <!-- Add your social media icons here -->
+                        <a href="/membership" class="text-light text-decoration-none">Apply for membership</a>
                     </div>
                 </div>
 

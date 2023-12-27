@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Gallery;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +30,8 @@ Route::get('/about-us', function () {
 });
 
 Route::get('/gallery', function () {
-    return view('gallery');
+    $images = Gallery::all();
+    return view('gallery', compact('images'));
 });
 
 Route::get('/centres', function () {
@@ -39,4 +42,8 @@ Route::get('/activities', function () {
     return view('activities');
 });
 
-Route::post('/images', [ImageController::class, 'store'])->name('images.store');
+Route::get('/membership', function () {
+    return view('membership');
+});
+
+Route::post('/products', [GalleryController::class, 'add'])->name('img.add');

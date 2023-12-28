@@ -60,6 +60,7 @@ Route::get('/admin/gallery', function () {
     return view('admin.gallery', compact('images'));
 });
 
-Route::post('/products', [GalleryController::class, 'add'])->name('img.add');
+Route::post('/gallery-add', [GalleryController::class, 'add'])->name('img.add');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::delete('/gallery/{id}', [GalleryController::class, 'deleteImage'])->name('image.delete');

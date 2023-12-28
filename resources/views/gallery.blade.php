@@ -28,9 +28,9 @@
         .container {
             max-width: 80rem;
             width: 100%;
-            padding: 4rem 2rem;
             margin: 0 auto;
-            padding-top: 2rem !important;
+            /* padding: 4rem 2rem; */
+            /* padding-top: 2rem !important; */
         }
 
         .main .container {
@@ -85,7 +85,7 @@
     <div class="text-center text-secondary">
         @if (count($images) > 0)
             <main class="main">
-                <div class="container" data-aos="fade-right">
+                <div class="container mb-5" data-aos="fade-right">
                     @foreach ($images as $image)
                         <div class="card">
                             <div class="card-image">
@@ -102,6 +102,7 @@
         @endif
 
         @Include('footer')
+        
         <script>
             // Fancybox Configuration
             $('[data-fancybox="gallery"]').fancybox({

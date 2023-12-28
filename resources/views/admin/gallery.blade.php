@@ -5,50 +5,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add events & activities</title>
+    <title>Gallery</title>
+    <style>
+        html {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #FF0000;
+        }
+
+        /* session alert */
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            font-size: smaller;
+        }
+
+        .alert-danger {
+            background-color: #f2dede;
+            border-color: #ebccd1;
+            color: #a94442;
+        }
+
+        .alert.alert-success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+
+        button {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+
+        /* Responsive layout */
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 0;
+            }
+
+            div {
+                margin: 0;
+            }
+
+            form,
+            ul {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            li {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            /* Adjust padding and margin for the outer div */
+            div {
+                padding: 1rem;
+                margin: 0;
+            }
+        }
+
+        /* Center content */
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     @include('admin.nav')
 
-    <div class="area" style="overflow-x: auto; height:90vh">
-        Add images to Gallery
-
-        <form method="POST" action="{{ route('img.add') }}" enctype="multipart/form-data"
-            style="margin-bottom: 20px; width: 100%;">
-            @csrf {{-- Cross-site Request Forgery protection --}}
-            <label for="name" style="font-weight: bold;">Image Caption:</label>
-            <input type="text" id="name" name="name" required
-                style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
-
-            <div style="margin-bottom: 20px;">
-                <label for="image" style="font-weight: bold; display: block; margin-bottom: 5px;">Image:</label>
-                <input type="file" id="image" name="image"
-                    style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 100%;">
-            </div>
-
-            <button type="submit"
-                style="padding: 10px 20px; color: white; background:#4CAF50; border: none; border-radius: 4px; cursor: pointer;">
-                Add Image
-            </button>
-        </form>
+    <div class="area" style="overflow-x: auto; height:93vh">
+        <div style="text-align: center">Gallery Image to Gallery</div>
 
         <div class="text-center text-secondary">
-            @if (count($images) > 0)
-                <main class="main">
-                    <div class="container" data-aos="fade-right">
-                        @foreach ($images as $image)
-                            <a href="{{ asset($image->image) }}">
-                                <img src="{{ asset($image->image) }}" alt="{{ $image->name }}" style="width:60%">
-                            </a>
-                        @endforeach
+
+            <div class="center" style="padding: 2rem; margin: 0 auto; max-width: 800px;">
+
+                @if (Session::has('success'))
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
                     </div>
-                </main>
-            @else
-                No images available
-            @endif
+                @endif
+
+                @if (Session::has('error'))
+                    <div class="alert alert-danger">
+                        {{ Session::get('error') }}
+                    </div>
+                @endif
+
+                <form method="POST" action="{{ route('img.add') }}" enctype="multipart/form-data"
+                    style="margin-bottom: 20px; width: 100%;">
+                    @csrf {{-- Cross-site Request Forgery protection --}}
+                    <label for="name" style="float: left">Caption:</label>
+                    <input type="text" id="name" name="name" required
+                        style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="hidden" id="post_by" name="post_by" value="{{ auth()->id() }}">
+                    <br>
+
+                    <div style="margin-bottom: 20px;">
+                        <label for="image" style="float: left; display: block; margin-bottom: 5px;">Image:</label>
+                        <input type="file" id="image" name="image"
+                            style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 100%;">
+                    </div>
+
+                    <button type="submit"
+                        style="padding: 10px 20px; color: white; background:#4CAF50; border: none; border-radius: 4px; cursor: pointer;">
+                        Add
+                    </button>
+                </form>
+
+                <hr>
+
+                <h3 style="margin-bottom: 20px;">Gallery Images</h3>
+                @if (count($images) > 0)
+
+
+                    <ul style="list-style: none; padding: 0; width: 100%;">
+                        @foreach ($images as $image)
+                            <li
+                                style="display: flex; align-items: center; justify-content: space-between; background-color: #fff; padding: 15px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px;">
+
+                                <div style="flex: 1;">
+                                    @if ($image->image)
+                                        <a href="{{ asset($image->image) }}">
+                                            <img src="{{ asset($image->image) }}" alt="{{ asset($image->name) }}"
+                                                style="max-width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+                                        </a>
+                                    @endif
+                                </div>
+
+                                <div style="flex: 1;">
+                                    <p></strong> {{ $image->name }}</p>
+                                </div>
+
+                                <div>
+                                    <form id="deleteForm{{ $image->id }}" method="post" action="{{ route('image.delete', ['id' => $image->id]) }}">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="button" class="delete-button" data-image-id="{{ $image->id }}"
+                                            style="color: #fff; padding: 10px; border: none; border-radius: 4px;">Delete
+                                            Image</button>
+                                    </form>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                @else
+                    No images available
+                @endif
+            </div>
+
+            <dialog id="deleteDialog" class="bg-light p-4"
+                style="border-radius: 10px; border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                <p style="font-size: 16px; margin-bottom: 20px;">Are you sure you want to delete this image?</p>
+                <button id="confirmDelete"
+                    style="background-color: #dc3545; color: #fff; border: none; padding: 8px 16px; margin-right: 10px; border-radius: 5px; cursor: pointer;">Yes,
+                    delete</button>
+                <button id="cancelDelete"
+                    style="background-color: #ddd; color: #333; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Cancel</button>
+            </dialog>
 
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Show the dialog on button click
+                $('.delete-button').click(function() {
+                    var userId = $(this).data('image-id');
+                    var dialog = document.getElementById('deleteDialog');
+
+                    // Set up event listeners for the dialog buttons
+                    document.getElementById('confirmDelete').onclick = function() {
+                        $('#deleteForm' + userId).submit();
+                        dialog.close();
+                    };
+
+                    document.getElementById('cancelDelete').onclick = function() {
+                        dialog.close();
+                    };
+
+                    dialog.showModal();
+                });
+            });
+        </script>
+
 </body>
 
 </html>

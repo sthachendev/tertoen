@@ -1,9 +1,13 @@
-<head>
+<head> 
+    <!-- Include Poppins font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
     <style>
         @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-        }
-
-        @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 
         .fa-2x {
             font-size: 2em;
@@ -83,7 +87,7 @@
             display: table-cell;
             vertical-align: middle;
             width: 190px;
-            font-family: 'Titillium Web', sans-serif;
+            /* font-family: 'Titillium Web', sans-serif; */
         }
 
         .main-menu>ul.logout {
@@ -140,10 +144,10 @@
         }
 
         @font-face {
-            font-family: 'Titillium Web';
+            /* font-family: 'Titillium Web'; */
             font-style: normal;
             font-weight: 300;
-            src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+            /* src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff'); */
         }
     </style>
 </head>

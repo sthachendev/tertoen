@@ -22,10 +22,10 @@ class GalleryController extends Controller
     
         $image->save();
     
-        return response()->json(['message' => 'Image added successfully']);
+        return back()->with('success', 'Image added to gallery.');
     }
 
-    public function deleteProduct($id)
+    public function deleteImage($id)
     {
         $product = Gallery::find($id);
 

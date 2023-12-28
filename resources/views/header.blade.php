@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Default background color for all screens */
-        .custom-bg {}
-
         /* Background color for small screens */
         @media (max-width: 575.98px) {
             .custom-bg {
@@ -69,7 +66,7 @@
         {{-- nav bar --}}
         <nav class="navbar navbar-expand-md py-4" style="background:#fff; padding: 0 10% 0 10%;">
 
-            <a href="#" class="navbar-brand">
+            <a href="/" class="navbar-brand">
                 <img src="{{ asset('images/logo.png') }}" alt="logo" style="width:70%">
             </a>
 

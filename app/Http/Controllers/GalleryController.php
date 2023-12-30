@@ -16,7 +16,7 @@ class GalleryController extends Controller
         if ($request->hasFile('image')) {
             $uploadedImage = $request->file('image');
             $imageName = time() . '.' . $uploadedImage->getClientOriginalExtension();
-            $imagePath = $uploadedImage->storeAs('public/gallery', $imageName);
+            $uploadedImage->storeAs('public/gallery', $imageName);
             $image->image = 'storage/gallery/' . $imageName;
         }
     

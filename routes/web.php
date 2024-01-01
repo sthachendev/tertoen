@@ -46,6 +46,9 @@ Route::get('/centres', function () {
 Route::get('/activities', function () {
     return view('activities');
 });
+Route::get('/donate', function () {
+    return view('donate');
+});
 
 Route::get('/membership', function () {
     return view('membership');

@@ -112,14 +112,14 @@
                     </li>
                 </ul>
                 {{-- hides the btn on l=md and lg screens but displays on collapse --}}
-                <button class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 mt-md-0 d-md-none"
+                <button onclick="window.location.href='/donate'"class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 mt-md-0 d-md-none"
                     style="border-radius:20px; font-size:12px;">
                     Donate
                 </button>
 
             </div>
             {{-- hides the screen on sm screen, display on md and lg screens --}}
-            <button class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 mt-md-0 d-none d-md-block"
+            <button onclick="window.location.href='/donate'" class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 mt-md-0 d-none d-md-block"
                 style="border-radius:20px; font-size:12px;">
                 Donate
             </button>

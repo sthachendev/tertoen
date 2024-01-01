@@ -1,9 +1,11 @@
 <?php
 
+use App\Models\Activity;
 use App\Models\Gallery;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ActivityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +46,8 @@ Route::get('/centres', function () {
 });
 
 Route::get('/activities', function () {
-    return view('activities');
+    $activities = Activity::all();
+    return view('activities', compact('activities'));
 });
 Route::get('/donate', function () {
     return view('donate');
@@ -67,3 +70,8 @@ Route::post('/gallery-add', [GalleryController::class, 'add'])->name('img.add');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::delete('/gallery/{id}', [GalleryController::class, 'deleteImage'])->name('image.delete');
+// routes/web.php
+
+
+Route::get('/activities/create', [ActivityController::class, 'create'])->name('activities.create');
+Route::post('/activities', [ActivityController::class, 'store'])->name('activities.store');

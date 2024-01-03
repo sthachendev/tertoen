@@ -59,7 +59,8 @@ Route::get('/membership', function () {
 });
 
 Route::get('/admin/events', function () {
-    return view('admin.events');
+    $activities = Activity::all();
+    return view('admin.events', compact('activities'));
 });
 
 Route::get('/admin/gallery', function () {
@@ -76,3 +77,4 @@ Route::delete('/gallery/{id}', [GalleryController::class, 'deleteImage'])->name(
 Route::get('/activities/create', [ActivityController::class, 'create'])->name('activities.create');
 Route::post('/activities', [ActivityController::class, 'store'])->name('activities.store');
 Route::get('/activities/{title}', [ActivityController::class, 'show'])->name('activities.show');
+Route::delete('/activities/{id}', [ActivityController::class, 'destroy'])->name('activity.delete');

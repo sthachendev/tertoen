@@ -65,6 +65,6 @@ class ActivityController extends Controller
         // Delete the activity
         $activity->delete();
 
-        return redirect()->route('activities.index')->with('success', 'Activity deleted successfully!');
+        return back()->with('success', 'Activity deleted successfully');
     }
 }

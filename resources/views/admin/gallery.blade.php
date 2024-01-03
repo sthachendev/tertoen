@@ -103,7 +103,7 @@
     @include('admin.nav')
 
     <div class="area" style="overflow-x: auto; height:93vh">
-        <div style="text-align: center">Gallery Image to Gallery</div>
+        <h3 style="margin-bottom: 20px; text-align: center">Gallery Images</h3>
 
         <div class="text-center text-secondary">
 
@@ -144,9 +144,7 @@
 
                 <hr>
 
-                <h3 style="margin-bottom: 20px;">Gallery Images</h3>
                 @if (count($images) > 0)
-
 
                     <ul style="list-style: none; padding: 0; width: 100%;">
                         @foreach ($images as $image)

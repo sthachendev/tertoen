@@ -43,8 +43,7 @@ class GalleryController extends Controller
 
         $product->delete();
 
-        return back()->with('success', 'Product deleted successfully');
-        // return response()->json(['message' => 'Product deleted successfully']);
+        return back()->with('success', 'Image deleted successfully');
     }
     
 }

@@ -259,7 +259,7 @@
 
             </div>
             <button type="submit">Log in</button>
-            {{-- <a href="https://codepen.io/elujambio/pen/yjwzGP" class="discrete" target="_blank">Basic version</a> --}}
+            <a href="/" class="discrete" style="text-decoration: none;">Go to home</a>
         </form>
     </div>
 </body>

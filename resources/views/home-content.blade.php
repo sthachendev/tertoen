@@ -8,7 +8,7 @@
 <div>
 </div>
 <main class="p-3 px-5" data-aos="fade-right">
-    <p style="font-size:14px;" class="text-secondary">
+    <p style="font-size:14px; line-height: 29px;" class="text-secondary">
         The reincarnation of Terton Drukdra Dorji Rinpoche, known as His Eminence Ugyen Droduel Thinley
         Kunchap Rinpoche has established the Pel Drukdraiing Foundation with the support from his numerous
         followers, donors, and patrons. The Foundation name, Drukdra, is after the country of Bhutan known

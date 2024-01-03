@@ -31,7 +31,7 @@
 
         .page {
             padding: 2em 8rem;
-            background: #cecece;
+            /* background: #e2dddd; */
             max-width: 100vw;
         }
 
@@ -43,10 +43,11 @@
 
         .article {
             padding: 1em;
+            padding-top: 0;
             background: #fff;
-            box-shadow:
+            /* box-shadow:
                 0 5px 10px rgba(0, 0, 0, 0.1),
-                0 20px 20px rgba(0, 0, 0, 0.05);
+                0 20px 20px rgba(0, 0, 0, 0.05); */
         }
     </style>
 </head>
@@ -55,22 +56,38 @@
 
     @Include('header')
 
-    {{-- <div style="height: 25vh" class="text-center text-secondary mt-5">
-        No Activities available
-    </div> --}}
-
     <div class="page">
         <div class="archive">
-            @foreach ($activities as $activity)
-                <article class="article">
-                    @if ($activity->photo)
-                        <img src="{{ asset($activity->photo) }}" alt="{{ asset($activity->photo) }}"
-                            style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
-                    @endif
-                    <h5 class="card-title">{{ $activity->title }}</h5>
-                    <p class="card-text">{{ $activity->description }}</p>
-                </article>
-            @endforeach
+            @if (count($activities) > 0)
+                @foreach ($activities as $activity)
+                    <article class="article">
+                        @if ($activity->photo)
+                        <a href="/activities/{{ rawurlencode($activity->title) }}">
+                            <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}" style="max-width: 100%;">
+                        </a>
+                        @endif
+                        <h6 style="text-align: center; font-size: 20px; padding: 15px 0 0 0; font-weight: 325;">
+                            <a href="/activities/{{ rawurlencode($activity->title) }}"
+                                style="color: #000; text-decoration: none;">
+                                {{ $activity->title }}
+                            </a>
+                        </h6>
+                        <p style="text-align: center; color:gray; font-size: 14px;">
+                            {{ $activity->created_at->format('Y-m-d') }}
+                        </p>
+
+                        <p
+                            style="text-align: justify; line-height: 29px; font-size: 14px; padding: 5px 0; color: rgb(87, 86, 86);">
+                            {{ Illuminate\Support\Str::limit($activity->description, $limit = 330, $end = ' ...') }}
+                        </p>
+
+                    </article>
+                @endforeach
+            @else
+                <div style="height: 25vh" class="text-center text-secondary mt-5">
+                    No Activities available
+                </div>
+            @endif
         </div>
     </div>
 

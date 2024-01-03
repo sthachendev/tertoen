@@ -44,7 +44,7 @@ class LoginController extends Controller
             if (Auth::check()) {
                 $user = Auth::user();
 
-                return redirect('/admin/events/add');
+                return redirect('/admin/events');
             }
 
         }

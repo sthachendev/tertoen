@@ -49,6 +49,7 @@ Route::get('/activities', function () {
     $activities = Activity::all();
     return view('activities', compact('activities'));
 });
+
 Route::get('/donate', function () {
     return view('donate');
 });
@@ -72,6 +73,6 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::delete('/gallery/{id}', [GalleryController::class, 'deleteImage'])->name('image.delete');
 // routes/web.php
 
-
 Route::get('/activities/create', [ActivityController::class, 'create'])->name('activities.create');
 Route::post('/activities', [ActivityController::class, 'store'])->name('activities.store');
+Route::get('/activities/{title}', [ActivityController::class, 'show'])->name('activities.show');

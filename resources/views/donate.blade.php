@@ -200,8 +200,50 @@
   border-radius: 5px;
   
 }
+.custom-text{
+  background-color: #24408F !important;
+}
+.btn-main{
+  border: 1px solid #24408F !important;
+  color: white !important;
+  background-color: #24408F !important;
+  border-radius: 7px !important;
+  /* font-weight: 900; */
+}
 
+.btn-reverse{
+  border: 1px solid #24408F !important;
+  color: #24408F !important;
+  background-color: white !important;
+  border-radius: 7px !important;
+  /* font-weight: 900; */
+}
 
+.img-1{
+  width: 50%;
+    height: 10vh;
+
+  background-image: url("{{ asset('images/bob.png') }}"); 
+  background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.img-2{
+  width: 50%;
+    height: 10vh;
+  background-image: url("{{ asset('images/bbnb.png') }}"); 
+  background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.img-3{
+  width: 50%;
+    height: 10vh;
+background-image: url("{{ asset('images/bnb.png') }}"); 
+  background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
 
 @media only screen and (max-width: 768px) {
   .donation-box {
@@ -213,7 +255,16 @@
 
   
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
     </style>
 </head>
@@ -221,55 +272,49 @@
 <body>
 
     @Include('header')
-    <!-- donate content -->
-    <div class="main-container">
-    <div class="donation-box bg-white">
-    <div class="plan">
-        <div class="one-time">
-          <div class="one-time1 btn">One time</div>
-        </div>
-        <div class="yearly3">
-          <div class="yearly4 btn">Yearly</div>
+  
+    <div class="main-container position-relative ">
+      <div class="inner-container position-absolute text-center w-100 h-100  d-flex justify-content-center align-items-center">
+        <div class="row m-0 p-0 w-100 h-100">
+          <div class="col-12 col-sm-8 col-md-7 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center flex-column">
+            
+            <div class="d-flex flex-column border dark rounded bg-white py-4 px-5 ">
+            <h2 class="mb-4 mt-3" style="color: #24408F; font-weight: 700 !important;">Donate</h2>  
+              <div>
+                <button class="btn btn-main w-50 rounded-start " style="border-radius: 7px 0 0px 7px !important">One time</button><button class="btn btn-reverse w-50 rounded-end "  style="border-radius: 0px 7px 7px 0px !important">yearly</button>
+              </div>
+              <p class="my-3">Choose an amount to donate</p>
+             <div class="mb-3">
+                <button class="btn btn-reverse">BTN 999</button>
+                <button class="btn btn-main">BTN 999</button>
+                <button class="btn btn-reverse">BTN 999</button>
+             </div>
+             <div class="input-group my-2">
+              <span class="input-group-text bg-white " style="color: #24408F !important; " id="basic-addon1">BTN</span>
+              <input type="number" class="form-control" placeholder="Other amount" aria-label="Other amount" aria-describedby="basic-addon1">
+            </div>
+            <div class="my-3">
+              <button class="btn w-100" style="color:white; background-color:#FF8B00">
+                Donate now
+              </button>
+            </div>
+            <div class="row d-flex flex-wrap mt-4">
+              
+              <div class="col-3 img-1 mx-1">
+              </div>
+              <div class="col-3 img-2 mx-1">
+
+              </div>
+              <div class="col-5 img-3 mx-1">
+  
+              </div>
+            </div>
+            </div>
+          </div>
+        
         </div>
       </div>
-
-      <div class="choose-an-amount">Choose an amount to donate</div>
-
-      <div class="autonums">
-        <div class="yearly">
-          <div class="btn">BTN 99</div>
-        </div>
-        <div class="yearly1">
-          <div class="btn">BTN 499</div>
-        </div>
-        <div class="yearly2">
-          <div class="btn">BTN 999</div>
-        </div>
-      </div>
-
-      <div class="otheramts">
-        <div class="btn">BTN</div>
-        <input type="text" class="other-amount" placeholder="Other Amount">
-
-      </div>
-
-      <div class="donate-button">
-        <div class="donate-now">DONATE NOW</div>
-      </div>
-      
-
-      <div class="banks">
-        <img class="images-2-icon" alt="" src="{{ asset('images/bnb.png') }}" />
-
-        <img class="download-3-icon" alt="" src="{{ asset('images/bob.png') }}" />
-
-        <img class="download-4-icon" alt="" src="{{ asset('images/bbnb.png') }}" />
-      </div>
-       
-      
     </div>
-    </div>
-    
 
 
     @Include('footer')

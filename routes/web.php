@@ -54,6 +54,15 @@ Route::get('/donate', function () {
     return view('donate');
 });
 
+Route::get('/onetimedonate', function () {
+    return view('one_time_donate');
+});
+
+Route::get('/yearlydonate', function () {
+    return view('yearly_donate');
+});
+
+
 Route::get('/membership', function () {
     return view('membership');
 });

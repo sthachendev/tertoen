@@ -281,14 +281,15 @@ input[type=number] {
             <div class="d-flex flex-column border dark rounded bg-white py-4 px-5 ">
             <h2 class="mb-4 mt-3" style="color: #24408F; font-weight: 700 !important;">Donate</h2>  
               <div>
-                <button class="btn btn-main w-50 rounded-start " style="border-radius: 7px 0 0px 7px !important">One time</button><button class="btn btn-reverse w-50 rounded-end "  style="border-radius: 0px 7px 7px 0px !important">yearly</button>
+                <button id="one-time-btn" class="btn btn-main w-50 rounded-start " style="border-radius: 7px 0 0px 7px !important">One time</button><button id="yearly-btn" class="btn btn-reverse w-50 rounded-end "  style="border-radius: 0px 7px 7px 0px !important">Yearly</button>
               </div>
               <p class="my-3">Choose an amount to donate</p>
              <div class="mb-3">
-                <button class="btn btn-reverse">BTN 999</button>
-                <button class="btn btn-main">BTN 999</button>
-                <button class="btn btn-reverse">BTN 999</button>
+                <button class="btn btn-reverse amt-1">BTN 200</button>
+                <button class="btn btn-main amt-2">BTN 350</button>
+                <button class="btn btn-reverse amt-3">BTN 500</button>
              </div>
+             
              <div class="input-group my-2">
               <span class="input-group-text bg-white " style="color: #24408F !important; " id="basic-addon1">BTN</span>
               <input type="number" class="form-control" placeholder="Other amount" aria-label="Other amount" aria-describedby="basic-addon1">
@@ -318,6 +319,50 @@ input[type=number] {
 
 
     @Include('footer')
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+$(document).ready(function() {
+  // When the "yearly" button is clicked
+  $('#yearly-btn').click(function() {
+    $(this).removeClass('btn-reverse').addClass('btn-main');
+    $('#one-time-btn').addClass('btn-reverse').removeClass('btn-main')
+    $('.amt-1').text('BTN 1000');
+    $('.amt-2').text('BTN 1200');
+    $('.amt-3').text('BTN 1500');
+  });
+    // When the "yearly" button is clicked
+    $('#one-time-btn').click(function() {
+    $(this).removeClass('btn-reverse').addClass('btn-main');
+    $('#yearly-btn').addClass('btn-reverse').removeClass('btn-main')
+    $('.amt-1').text('BTN 200');
+    $('.amt-2').text('BTN 350');
+    $('.amt-3').text('BTN 500');
+  });
+
+  $('.amt-1').click(function() {
+    $(this).removeClass('btn-reverse').addClass('btn-main');
+    $('.amt-2').addClass('btn-reverse').removeClass('btn-main')
+    $('.amt-3').addClass('btn-reverse').removeClass('btn-main')
+  });
+  $('.amt-2').click(function() {
+    $(this).removeClass('btn-reverse').addClass('btn-main');
+    $('.amt-1').addClass('btn-reverse').removeClass('btn-main')
+    $('.amt-3').addClass('btn-reverse').removeClass('btn-main')
+  });
+  $('.amt-3').click(function() {
+    $(this).removeClass('btn-reverse').addClass('btn-main');
+    $('.amt-1').addClass('btn-reverse').removeClass('btn-main')
+    $('.amt-2').addClass('btn-reverse').removeClass('btn-main')
+  });
+
+});
+
+
+
+
+
+</script>
 
 </body>
 

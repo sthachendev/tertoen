@@ -95,7 +95,7 @@ input[type=number] {
       <div class="inner-container position-absolute text-center w-100 h-100  d-flex justify-content-center align-items-center">
         <div class="row m-0 p-0 w-100 h-100">
           <div class="col-12 col-sm-8 col-md-7 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center flex-column">
-            <form id="dontate-form" action="">
+            <!-- <form id="dontate-form" action=""> -->
               <div class="d-flex flex-column border dark rounded bg-white py-4 px-5 ">
               <h2 class="mb-4 mt-3" style="color: #24408F; font-weight: 600 !important;">Donate</h2>  
                 <div>
@@ -113,7 +113,7 @@ input[type=number] {
                 <input type="number" class="form-control donation-amt" placeholder="Other amount" aria-label="Other amount" aria-describedby="basic-addon1">
               </div>
               <div class="my-3">
-                <button class="btn w-100" style="color:white; background-color:#FF8B00">
+                <button onclick="window.location.href='/onetimedonate'" class="btn w-100" style="color:white; background-color:#FF8B00" >
                   Donate now
                 </button>
               </div>
@@ -130,7 +130,7 @@ input[type=number] {
               </div>
             </div>
                           
-            </form>
+            <!-- </form> -->
           </div>
         
         </div>

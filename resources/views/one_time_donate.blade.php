@@ -77,7 +77,7 @@
 
     </div>
     <div class=" row col-10 col-sm-9 col-md-9 col-lg-9 d-flex justify-content-evenly  m-3 " style="min-height: 295px;">
-        <div class="screenshot-container col-10 col-sm-7 col-md-6 col-lg-5 rounded shadow-lg pb-2 bg-white">
+        <div class="screenshot-container col-11 col-sm-11 col-md-11 col-lg-5 rounded shadow-lg pb-2 bg-white">
             <div class="flex-column d-flex justify-content-center align-items-center h-75 ">
             <span>
                 <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -96,20 +96,20 @@
            </div>
             
         </div>
-        <div class=" d-flex align-items-center justify-content-center col-12 col-sm-12 col-md-12 col-lg-1"><h1 style="color:#24408F; font-weight:600;">OR</h1></div>
-        <div class="form-container col-10 col-sm-7 col-md-6 col-lg-5">
+        <div class=" d-flex align-items-center justify-content-center col-12 col-sm-12 col-md-12 col-lg-1 my-4"><h1 style="color:#24408F; font-weight:600;">OR</h1></div>
+        <div class="form-container col-11 col-sm-11 col-md-11 col-lg-5">
             <form action="" class="d-flex justify-content-between flex-column">
                 <div class="input-group mb-4">
-                <input type="number" class="form-control" aria-label="Phone">
+                <input type="number" class="form-control" placeholder="Phone">
                 </div>
                 <div class="input-group mb-4">
-                <input type="number" class="form-control" aria-label="Phone">
+                <input type="number" class="form-control" placeholder="Jrnl. No / PRNO">
                 </div>
                 <div class="input-group mb-4">
-                <input type="number" class="form-control" aria-label="Phone">
+                <input type="number" class="form-control" placeholder="Amount">
                 </div>
                 <div class="input-group mb-4">
-                <input type="text" class="form-control" aria-label="Phone">
+                <input type="text" class="form-control" placeholder="Remarks">
                 </div>
                 <div class="input-group">
                     <button class="btn text-white w-100 " style="background-color: #F6821F">Upload Screenshot</button>

@@ -97,7 +97,7 @@ input[type=number] {
           <div class="col-12 col-sm-8 col-md-7 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center flex-column">
             <form id="dontate-form" action="">
               <div class="d-flex flex-column border dark rounded bg-white py-4 px-5 ">
-              <h2 class="mb-4 mt-3" style="color: #24408F; font-weight: 700 !important;">Donate</h2>  
+              <h2 class="mb-4 mt-3" style="color: #24408F; font-weight: 600 !important;">Donate</h2>  
                 <div>
                   <button id="one-time-btn" class="btn btn-main w-50 rounded-start " style="border-radius: 7px 0 0px 7px !important">One time</button><button id="yearly-btn" class="btn btn-reverse w-50 rounded-end "  style="border-radius: 0px 7px 7px 0px !important">Yearly</button>
                 </div>

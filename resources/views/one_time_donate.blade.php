@@ -48,7 +48,7 @@
            <div>
 
             <div class=" text-white p-4" style="background-color: #24408F;">
-                <h2>SMALLER AMOUNT, GREATER IMPACT</h2>
+                <h2 >SMALLER AMOUNT, GREATER IMPACT</h2>
                 <p>Smaller monthly donations can better support our long-term projects to reach more people around the world.</p>
                 </div>
             </div>
@@ -58,8 +58,8 @@
     <div class=" d-flex flex-column justify-content-center align-items-center " style="margin-top: 150px;">
     <div class="col-10 col-sm-9 col-md-9 col-lg-9 d-flex justify-content-around  m-3">
         <div>
-            <h5>Account Number</h5>
-            <p>20234029 <span class="ms-3"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+            <h5 class="text-muted">Account Number</h5>
+            <p style="font-weight: 700;">20234029 <span class="ms-3"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#24408F" class="bi bi-clipboard" viewBox="0 0 16 16">
                 <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
                 <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
             </svg></span></p>
@@ -67,12 +67,12 @@
 
         </div>
         <div>
-            <h5>Name</h5>
-            <p>Tortoen Foundation</p>
+            <h5 class="text-muted">Name</h5>
+            <p style="font-weight: 700;" >Tortoen Foundation</p>
         </div>
         <div>
-            <h5>Bank</h5>
-            <p>Bank of Bhutan</p>
+            <h5 class="text-muted">Bank</h5>
+            <p class="text-nowrap" style="font-weight: 700;">Bank of Bhutan</p>
         </div>
 
     </div>
@@ -92,7 +92,7 @@
             </span>
             </div>
            <div class="d-flex align-items-end h-25">
-                <button class="btn text-white w-100 " style="background-color: #F6821F">Upload Screenshot</button>
+                <button class="btn text-white w-100 " style="background-color: #F6821F">UPLOAD SCREENSHOT</button>
            </div>
             
         </div>
@@ -112,7 +112,7 @@
                 <input type="text" class="form-control" placeholder="Remarks">
                 </div>
                 <div class="input-group">
-                    <button class="btn text-white w-100 " style="background-color: #F6821F">Upload Screenshot</button>
+                    <button class="btn text-white w-100 " style="background-color: #F6821F">SEND TRANSACTION DETAILS</button>
                 </div>
             </form>
         </div>

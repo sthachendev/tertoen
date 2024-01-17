@@ -98,8 +98,10 @@ input[type=number] {
             <!-- <form id="dontate-form" action=""> -->
               <div class="d-flex flex-column border dark rounded bg-white py-4 px-5 ">
               <h2 class="mb-4 mt-3" style="color: #24408F; font-weight: 600 !important;">Donate</h2>  
-                <div>
-                  <button id="one-time-btn" class="btn btn-main w-50 rounded-start " style="border-radius: 7px 0 0px 7px !important">One time</button><button id="yearly-btn" class="btn btn-reverse w-50 rounded-end "  style="border-radius: 0px 7px 7px 0px !important">Yearly</button>
+                <div class="d-flex justify-content-center align-items-center ">
+                  <button id="one-time-btn" class="btn m-0 btn-main rounded-start w-100 text-nowrap" style="border-radius: 7px 0 0px 7px !important">One time</button>
+                  <button id="monthly-btn" class="btn m-0 btn-reverse rounded-end  "  style="border-radius: 0px 0px 0px 0px !important">Monthly</button>
+                  <button id="yearly-btn" class="btn m-0 btn-reverse rounded-end w-100"  style="border-radius: 0px 7px 7px 0px !important">Yearly</button>
                 </div>
                 <p class="my-3">Choose an amount to donate</p>
               <div class="mb-3">
@@ -137,7 +139,6 @@ input[type=number] {
       </div>
     </div>
 
-
     @Include('footer')
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -148,6 +149,16 @@ input[type=number] {
           event.preventDefault();
           $(this).removeClass('btn-reverse').addClass('btn-main');
           $('#one-time-btn').addClass('btn-reverse').removeClass('btn-main')
+          $('#monthly-btn').addClass('btn-reverse').removeClass('btn-main')
+          $('.amt-1').text('BTN 1000');
+          $('.amt-2').text('BTN 1200');
+          $('.amt-3').text('BTN 1500');
+        });
+        $('#monthly-btn').click(function(event) {
+          event.preventDefault();
+          $(this).removeClass('btn-reverse').addClass('btn-main');
+          $('#one-time-btn').addClass('btn-reverse').removeClass('btn-main');
+          $('#yearly-btn').addClass('btn-reverse').removeClass('btn-main')
           $('.amt-1').text('BTN 1000');
           $('.amt-2').text('BTN 1200');
           $('.amt-3').text('BTN 1500');
@@ -157,6 +168,7 @@ input[type=number] {
             event.preventDefault();
           $(this).removeClass('btn-reverse').addClass('btn-main');
           $('#yearly-btn').addClass('btn-reverse').removeClass('btn-main')
+          $('#monthly-btn').addClass('btn-reverse').removeClass('btn-main')
           $('.amt-1').text('BTN 200');
           $('.amt-2').text('BTN 350');
           $('.amt-3').text('BTN 500');

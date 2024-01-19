@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yearly donate</title>
+    <title>Monthly donate</title>
  <style>
         p {
             font-size: 14px;
@@ -40,7 +40,7 @@
         <div class="position-absolute top-100 start-50 translate-middle bg-white rouned col-10 col-sm-9 col-md-8 col-lg-6">
            <div class="d-flex flex-nowrap jusify-content-between p-4 ">
                     <div class="">
-                        <span>You are making a yearly donation of <span style = "color: #FF8B00;">BTN</span></span> <span style = "color: #FF8B00;">250</span>
+                        <span>You are making a monthly donation of <span style = "color: #FF8B00;">BTN</span></span> <span style = "color: #FF8B00;">250</span>
                     </div>
                     <div class="ms-auto" style = "color: #FF8B00;">
                         <a > Change Amount</a>
@@ -51,7 +51,7 @@
 
             <div class=" text-white p-4" style="background-color: #24408F;">
                 <h4 >Join BKWC Foundation by donating monthly.</h4>
-                <p>Smaller yearly donations can better support our long-term projects to reach more people around the world.</p>
+                <p>Smaller monthly donations can better support our long-term projects to reach more people around the world.</p>
                 </div>
             </div>
             </div>

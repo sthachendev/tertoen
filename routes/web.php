@@ -62,6 +62,9 @@ Route::get('/yearlydonate', function () {
     return view('yearly_donate');
 });
 
+Route::get('/monthlydonate', function () {
+    return view('monthly_donate');
+});
 
 Route::get('/membership', function () {
     return view('membership');

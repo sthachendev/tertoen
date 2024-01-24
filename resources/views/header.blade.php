@@ -67,7 +67,7 @@
         <nav class="navbar navbar-expand-md py-4" style="background:#fff; padding: 0 10% 0 10%;">
 
             <a href="/" class="navbar-brand">
-                <img src="{{ asset('images/logo.png') }}" alt="logo" style="width:70%">
+                <img src="{{ asset('images/logo.png') }}" alt="logo" style="width:15%">
             </a>
 
             <!-- icon when the nav collapse -->

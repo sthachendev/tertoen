@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row p-3">
                 <!-- Left side with text logo and social media icons -->
-                <div class="col-md-6 text-md-start mb-3 mb-md-0" id="text-logo" data-aos="fade-right">
+                <div class="col-md-6 text-md-start mb-3 mb-md-0" id="text-logo" >
                     <span class="fw-bold fs-4 text-light">
                         BAYUEL KINZANG YOESEL
                         <br>
@@ -85,21 +85,18 @@
                 </div>
 
                 <!-- Right side with quick links -->
-                <div class="col-md-6 text-md-end" style="background:#4F5B9E" data-aos="fade-left">
+                <div class="col-md-6 text-md-end" style="background:#4F5B9E">
                     <div class="d-flex justify-content-around p-3">
 
                         <div class="d-flex flex-column p-3 text-start">
                             <h6 class="text-light mb-3">Get Involved</h6>
-                            <a href="#" class="text-light text-decoration-none mb-2"
-                                style="font-size:12px">Center</a>
-                            <a href="#" class="text-light text-decoration-none mb-2"
-                                style="font-size:12px">Activities</a>
-                            <a href="#" class="text-light text-decoration-none mb-2" style="font-size:12px">About
-                                Us</a>
-                            <a href="#" class="text-light text-decoration-none mb-2"
-                                style="font-size:12px">Support Us</a>
-                            <a href="#" class="text-light text-decoration-none mb-2"
-                                style="font-size:12px">Fundraising</a>
+                            <a href="/centres" class="text-light text-decoration-none mb-2 mt-2"
+                                style="font-size:12px">CENTRES</a>
+                            <a href="#" class="text-light text-decoration-none mb-2 mt-2"
+                                style="font-size:12px">ACTIVITIES</a>
+                            <a href="#" class="text-light text-decoration-none mb-2 mt-2" style="font-size:12px">ABOUT US</a>
+                            <a href="/donate" class="text-light text-decoration-none mb-2 mt-2" 
+                                style="font-size:12px">SUPPORT US</a>
                         </div>
 
                         <div class="d-flex flex-column p-3 text-start">
@@ -118,7 +115,7 @@
             </div>
 
             <hr>
-            <div class="text-center" style="font-size:12px">BAYUEL KINZANG YOESEL CHOLING FOUNDATION &copy 2023</div>
+            <div class="text-center" style="font-size:12px"> &copy 2024 BAYUEL KINZANG YOESEL CHOLING FOUNDATION</div>
         </div>
     </footer>
 

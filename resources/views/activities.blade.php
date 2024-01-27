@@ -62,10 +62,14 @@
                 @foreach ($activities as $activity)
                     <article class="article">
                         @if ($activity->photo)
-                        <a href="/activities/{{ rawurlencode($activity->title) }}">
-                            <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}" style="max-width: 100%;">
-                        </a>
+                            <div style="text-align: center;">
+                                <a href="/activities/{{ rawurlencode($activity->title) }}">
+                                    <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}"
+                                        style="max-width: 100%; display: inline-block;">
+                                </a>
+                            </div>
                         @endif
+
                         <h6 style="text-align: center; font-size: 20px; padding: 15px 0 0 0; font-weight: 325;">
                             <a href="/activities/{{ rawurlencode($activity->title) }}"
                                 style="color: #000; text-decoration: none;">

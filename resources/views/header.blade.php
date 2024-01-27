@@ -10,10 +10,57 @@
         @media (max-width: 575.98px) {
             .custom-bg {
                 background-color: rgb(225, 239, 243);
+                margin-top: 1rem;
                 /* Change this to your desired color for small screens */
             }
         }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #1d1c1c;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 2px;
+            position: relative;
+            padding: 0.2rem;
+            display: inline-block;
+            /* Add this to ensure proper positioning */
+            transition: color 0.3s ease-in-out;
+            /* Add transition for smooth color change */
+        }
+
+        .nav-item a:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #24408F;
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav-item.active a {
+            color: #051b58;
+        }
+
+        .nav-item.active a:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .nav-item a:hover {
+            color: #24408F !important;
+        }
+
+        .nav-item a:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
     </style>
+
     {{-- anime on scroll --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 </head>
@@ -22,9 +69,9 @@
 
     <header style="background-color: #24408F;">
 
-        <div class="d-flex justify-content-around">
+        <div class="d-flex justify-content-between ms-5 ">
             <!-- header above the navs -->
-            <div class="d-flex justify-content-space-around align-items-center ps-3 py-2">
+            <div class="d-flex justify-content-space-around align-items-center py-2">
                 <div class="me-4 text-light" style="font-size:12px;">
                     <i class="fa-solid fa-phone me-1"></i>+975-17618421
                 </div>
@@ -33,7 +80,7 @@
                 </div>
             </div>
             <!-- social media links -->
-            <div style="background: #4F5B9E;" class="d-flex ps-3 py-2">
+            <div style="background: #4F5B9E;" class="d-flex ps-3 py-2 me-5">
                 <a href="https://www.facebook.com/YourFacebookPage"
                     class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                     style="width: 30px; height: 30px; border-radius: 50%;">
@@ -66,8 +113,8 @@
         {{-- nav bar --}}
         <nav class="navbar navbar-expand-md py-4" style="background:#fff; padding: 0 10% 0 10%;">
 
-            <a href="/" class="navbar-brand">
-                <img src="{{ asset('images/logo.png') }}" alt="logo" style="width:15%">
+            <a href="/" class="navbar-brand d-none d-md-inline">
+                <img src="{{ asset('images/logo.png') }}" alt="logo" style="max-width:15%">
             </a>
 
             <!-- icon when the nav collapse -->
@@ -75,53 +122,55 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="navbar-collapse collapse justify-content-center custom-bg p-3 p-md-0" id="navbar">
+            <div class="navbar-collapse collapse justify-content-center custom-bg p-2" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="/" class="text-dark text-decoration-none me-3" style="font-size:12px">Home
-                            <span class="ms-3 text-muted d-none d-md-inline">|</span>
+                        <a href="/" class="text-decoration-none me-4">HOME
+                            {{-- <span class="ms-3 text-muted d-none d-md-inline">|</span> --}}
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/about-us" class="text-dark text-decoration-none me-3" style="font-size:12px">About Us
-                            <span class="ms-3 text-muted d-none d-md-inline">|</span>
+                        <a href="/lineage" class="text-decoration-none me-4">LINEAGE</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/centres" class="text-decoration-none me-4">CENTRES
+                            {{-- <span class="ms-3 text-muted d-none d-md-inline">|</span> --}}
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/centres" class="text-dark text-decoration-none me-3" style="font-size:12px">Centres
-                            <span class="ms-3 text-muted d-none d-md-inline">|</span>
+                        <a href="/activities" class="text-decoration-none me-4">ACTIVITIES
+                            {{-- <span class="ms-3 text-muted d-none d-md-inline">|</span> --}}
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/activities" class="text-dark text-decoration-none me-3" style="font-size:12px">Activities
-                            <span class="ms-3 text-muted d-none d-md-inline">|</span>
+                        <a href="/gallery" class="text-decoration-none me-4">GALLERY
+                            {{-- <span class="ms-3 text-muted d-none d-md-inline">|</span> --}}
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/gallery" class="text-dark text-decoration-none me-3" style="font-size:12px">Gallery
-                            <span class="ms-3 text-muted d-none d-md-inline">|</span>
+                        <a href="/about-us" class="text-decoration-none me-4">ABOUT US
+                            {{-- <span class="ms-3 text-muted d-none d-md-inline">|</span> --}}
                         </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="/lineage" class="text-dark text-decoration-none" style="font-size:12px">Lineage</a>
                     </li>
                 </ul>
                 {{-- hides the btn on l=md and lg screens but displays on collapse --}}
-                <button onclick="window.location.href='/donate'"class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 mt-md-0 d-md-none"
+                <button
+                    onclick="window.location.href='/donate'"class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 mt-md-0 d-md-none"
                     style="border-radius:20px; font-size:12px;">
-                    Donate
+                    DONATE
                 </button>
 
             </div>
             {{-- hides the screen on sm screen, display on md and lg screens --}}
-            <button onclick="window.location.href='/donate'" class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 mt-md-0 d-none d-md-block"
+            <button onclick="window.location.href='/donate'"
+                class="btn btn-sm btn-warning text-light px-3 py-2 mt-3 mt-md-0 d-none d-md-block"
                 style="border-radius:20px; font-size:12px;">
-                Donate
+                DONATE
             </button>
 
         </nav>
@@ -129,6 +178,20 @@
     </header>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Get the current URL path
+        var path = window.location.pathname;
+
+        // Find the corresponding navigation item and add the "active" class
+        document.addEventListener('DOMContentLoaded', function() {
+            var navItems = document.querySelectorAll('.nav-item a');
+            navItems.forEach(function(item) {
+                if (item.getAttribute('href') === path) {
+                    item.parentNode.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

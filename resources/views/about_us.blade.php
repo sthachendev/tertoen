@@ -68,10 +68,11 @@
         BOARD OF DIRECTORS
     </h4>
 
-    <div style="text-center" class="text-secondary d-flex justify-content-center" data-aos="fade-right">
-        <img src="{{ asset('images/trulku.jpg') }}" alt="logo" class="mx-5" data-aos="fade-right"
+    <div class="text-secondary d-flex justify-content-center" data-aos="fade-right">
+        <img src="{{ asset('images/trulku.jpg') }}" alt="logo" class="mx-5 img-fluid" data-aos="fade-right"
             data-aos-easing="ease" data-aos-duration="1000">
     </div>
+
     <h4 id="title" class="text-center my-3" data-aos="fade-right">
         HE Truelku Ugyen Drodrul Thinley Kunchap Rinpoche
     </h4>
@@ -79,20 +80,20 @@
         President/Patron
     </p>
     <br><br>
-    <div style="text-center" class="text-secondary d-flex justify-content-center" data-aos="fade-right">
-        <figure class="mx-5">
-            <img src="{{ asset('images/ed.jpg') }}" alt="logo">
+    <div class="text-center d-flex flex-wrap justify-content-center" data-aos="fade-right">
+        <figure class="mx-3 mb-4">
+            <img src="{{ asset('images/ed.jpg') }}" alt="Executive Director">
             <figcaption class="mt-3">
                 <strong>Executive Director</strong>
                 <br>
                 Wangchuk Rinzin
                 <br>
-                <span style="font-size:12px">dzongkhaenglish@yahoo.com</span>
+                <span style="font-size: 12px">dzongkhaenglish@yahoo.com</span>
             </figcaption>
         </figure>
 
-        <figure class="mx-5">
-            <img src="{{ asset('images/chair.jpg') }}" alt="logo">
+        <figure class="mx-3 mb-4">
+            <img src="{{ asset('images/chair.jpg') }}" alt="Chair">
             <figcaption class="mt-3">
                 <strong>Chair</strong>
                 <br>
@@ -100,14 +101,14 @@
             </figcaption>
         </figure>
 
-        <figure class="mx-5">
-            <img src="{{ asset('images/treasurer.jpg') }}" alt="logo">
+        <figure class="mx-3 mb-4">
+            <img src="{{ asset('images/treasurer.jpg') }}" alt="Treasurer">
             <figcaption class="mt-3">
                 <strong>Treasurer</strong>
                 <br>
                 Nima Palden
                 <br>
-                <span style="font-size:12px">npelden@yahoo.com</span>
+                <span style="font-size: 12px">npelden@yahoo.com</span>
             </figcaption>
         </figure>
     </div>

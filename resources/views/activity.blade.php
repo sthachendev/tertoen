@@ -69,9 +69,9 @@
                         {{ $activity->created_at->format('Y-m-d') }}
                     </p>
 
-                    @if ($activity->photo)
-                        <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}" style="max-width: 100%;">
-                    @endif
+                    <div style="text-align: center;">
+                        <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}" style="max-width: 100%; display: inline-block;">
+                    </div>
 
                     <p
                         style="text-align: justify; line-height: 29px; font-size: 14px; padding: 15px 0; color: rgb(87, 86, 86);">

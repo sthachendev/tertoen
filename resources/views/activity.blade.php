@@ -12,21 +12,10 @@
             line-height: 1.15;
         }
 
-        hr {
-            /*dummy content*/
-            height: 6px;
-            border: none;
-            background: rgba(0, 0, 0, 0.1);
-        }
-
-        hr:last-child {
-            /*dummy content*/
-            margin-right: 60%;
-        }
-
-        hr.image {
-            /*dummy content*/
-            padding-bottom: 50%;
+        @media (max-width: 769px) {
+            .page {
+                padding: 0 !important;
+            }
         }
 
         .page {
@@ -45,9 +34,6 @@
             padding: 1em 4em;
             padding-top: 0;
             background: #fff;
-            /* box-shadow:
-                0 5px 10px rgba(0, 0, 0, 0.1),
-                0 20px 20px rgba(0, 0, 0, 0.05); */
         }
     </style>
 </head>
@@ -70,7 +56,8 @@
                     </p>
 
                     <div style="text-align: center;">
-                        <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}" style="max-width: 100%; display: inline-block;">
+                        <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}"
+                            style="max-width: 100%; display: inline-block;">
                     </div>
 
                     <p

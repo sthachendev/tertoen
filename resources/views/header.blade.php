@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Background color for small screens */
-        @media (max-width: 575.98px) {
+        @media (max-width: 767px) {
             .custom-bg {
                 background-color: rgb(225, 239, 243);
                 margin-top: 1rem;
-                /* Change this to your desired color for small screens */
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
+            .nav-item a {
+                margin-top: 15px;
+            }
+
+            nav img {
+                max-width: 12% !important;
+            }
+
+        }
+
+        @media (max-width: 900px) {
+            .nav-item a {
+                margin-right: 0.5rem !important;
             }
         }
 
@@ -24,9 +38,7 @@
             position: relative;
             padding: 0.2rem;
             display: inline-block;
-            /* Add this to ensure proper positioning */
             transition: color 0.3s ease-in-out;
-            /* Add transition for smooth color change */
         }
 
         .nav-item a:after {
@@ -72,9 +84,11 @@
         <div class="d-flex justify-content-between ms-5 ">
             <!-- header above the navs -->
             <div class="d-flex justify-content-space-around align-items-center py-2">
-                <div class="me-4 text-light" style="font-size:12px;">
+
+                <div class="me-4 text-light d-none d-sm-inline" style="font-size:12px;">
                     <i class="fa-solid fa-phone me-1"></i>+975-17618421
                 </div>
+
                 <div class="me-3 text-light" style="font-size:12px">
                     <i class="fa-solid fa-envelope me-1"></i>info@peldrukdraling.org
                 </div>
@@ -93,19 +107,19 @@
                     <i class="fab fa-instagram"></i>
                 </a>
 
-                <div class="d-none d-sm-inline">{{-- hides telegram icon on sm screen --}}
-                    <a href="https://t.me/YourTelegramUsername"
-                        class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
-                        style="width: 30px; height: 30px; border-radius: 50%;">
-                        <i class="fab fa-telegram-plane"></i>
-                    </a>
-                </div>
+                <a href="https://t.me/YourTelegramUsername"
+                    class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
+                    style="width: 30px; height: 30px; border-radius: 50%;">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
 
+                {{-- <div class="d-none d-sm-inline">hides telegram icon on sm screen --}}
                 <a href="https://wa.me/1234567890"
                     class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                     style="width: 30px; height: 30px; border-radius: 50%;">
                     <i class="fab fa-whatsapp"></i>
                 </a>
+                {{-- </div> --}}
             </div>
 
         </div>
@@ -113,9 +127,9 @@
         {{-- nav bar --}}
         <nav class="navbar navbar-expand-md py-4" style="background:#fff; padding: 0 10% 0 10%;">
 
-            <a href="/" class="navbar-brand d-none d-md-inline">
-                <img src="{{ asset('images/logo.png') }}" alt="logo" style="max-width:15%">
-            </a>
+            {{-- <a href="/" class="navbar-brand d-none d-md-inline"> --}}
+            <img src="{{ asset('images/logo.png') }}" alt="logo" style="max-width:7%;">
+            {{-- </a> --}}
 
             <!-- icon when the nav collapse -->
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">

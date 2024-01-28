@@ -12,26 +12,14 @@
             line-height: 1.15;
         }
 
-        hr {
-            /*dummy content*/
-            height: 6px;
-            border: none;
-            background: rgba(0, 0, 0, 0.1);
-        }
-
-        hr:last-child {
-            /*dummy content*/
-            margin-right: 60%;
-        }
-
-        hr.image {
-            /*dummy content*/
-            padding-bottom: 50%;
+        @media (max-width: 769px) {
+            .page {
+                padding: 0 !important;
+            }
         }
 
         .page {
             padding: 2em 8rem;
-            /* background: #e2dddd; */
             max-width: 100vw;
         }
 
@@ -43,11 +31,6 @@
 
         .article {
             padding: 1em;
-            padding-top: 0;
-            background: #fff;
-            /* box-shadow:
-                0 5px 10px rgba(0, 0, 0, 0.1),
-                0 20px 20px rgba(0, 0, 0, 0.05); */
         }
     </style>
 </head>

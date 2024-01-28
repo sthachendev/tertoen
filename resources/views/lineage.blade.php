@@ -12,6 +12,12 @@
             line-height: 29px;
             color: #777777;
         }
+
+        @media (max-width: 769px) {
+            main {
+                margin: 0 !important;
+            }
+        }
     </style>
 </head>
 
@@ -27,7 +33,7 @@
         H.H Ugyen Droduel Thinley Kunchap Rinpoche
     </h4>
 
-    <main class="p-3 px-5 pt-3" style="margin: 0 20% 0 20%">
+    <main class="px-5 py-3" style="margin: 0 20%;">
         <h4 style="font-weight: 100" data-aos="fade-right">LINEAGE</h4>
         <p data-aos="fade-right">
             From the time of the prevailing of the Buddha Dharma to the existing moment in time, there
@@ -113,7 +119,8 @@
 
         <br>
         <br>
-        <h4 style="font-weight: 100" data-aos="fade-right">His Holiness Trulku Ugyen Drodrul Thinley Kunchap Rinpoche</h4>
+        <h4 style="font-weight: 100" data-aos="fade-right">His Holiness Trulku Ugyen Drodrul Thinley Kunchap Rinpoche
+        </h4>
         <br>
         <div style="overflow: hidden;" data-aos="fade-right">
             <img src="{{ asset('images/trulku.jpg') }}" style="float: left; margin-right: 10px;" class="me-5 w-50">
@@ -128,7 +135,7 @@
             </p>
         </div>
 
-        <p>
+        <p data-aos="fade-right">
             At the age of three, Trulku was saying again and again that he wanted to go to Chumphu Lhakhang (temple)
             that is located in Paro. On the way to visiting the temple, Trulku remembered a cave and went to see it.
             While in the cave, he revealed a treasure that had been placed there previously. While at Chumphu Lhakhang
@@ -140,7 +147,7 @@
             Dorji. As well, at the age of three, he remembered vividly many incidents from his previous life.
         </p>
 
-        <p>
+        <p data-aos="fade-right">
             At present, Trulku is pursuing Buddhist higher education at Sangchen Chokhor Buddhist College, in Paro,
             Bhutan. Trulku came to Sangchen Chokhor Buddhist College at the age of four and has been residing here since
             where he lives with his teacher and attendants. Presently, H.H. Truelku Ugyen Droduel ThinleyKunchap

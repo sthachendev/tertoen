@@ -1,3 +1,12 @@
+<head>
+    <style>
+        @media (max-width: 769px) {
+            iframe {
+                width: 90% !important;
+            }
+        }
+    </style>
+</head>
 <img src="{{ asset('images/rinpoche-image-1.png') }}" alt="logo" class="mx-5" data-aos="fade-right"
     data-aos-easing="ease" data-aos-duration="1000">
 
@@ -18,8 +27,7 @@
 </main>
 
 <div style="display: flex; justify-content:center;" class="mt-0 mb-5">
-    <iframe width="60%" height="340" src="https://www.youtube.com/embed/s4pxZUCmHsc" 
-    title="Gorina" frameborder="0"
+    <iframe width="60%" height="340" src="https://www.youtube.com/embed/s4pxZUCmHsc" title="Gorina" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
 </div>

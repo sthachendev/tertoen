@@ -47,15 +47,15 @@
             @if ($activity)
                 <article class="article">
 
-                    <h6 style="font-size: 20px; padding: 0; font-weight: 325;">
+                    <h6 style="font-size: 20px; padding: 0; font-weight: 325;" class="text-center">
                         {{ $activity->title }}
                     </h6>
 
-                    <p style="color: gray; font-size: 14px;">
+                    <p style="color: gray; font-size: 14px;" class="text-center">
                         {{ $activity->created_at->format('Y-m-d') }}
                     </p>
 
-                    <div style="text-align: center;">
+                    <div style="text-align: center;" class="border">
                         <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}"
                             style="max-width: 100%; display: inline-block;">
                     </div>

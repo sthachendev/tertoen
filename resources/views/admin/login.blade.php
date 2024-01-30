@@ -214,7 +214,6 @@
                 <input placeholder="Email" type="email" name="email" id="email" autocomplete="off">
                 <label for="email">Email:</label>
                 <div class="icon">
-                    <?xml version="1.0" encoding="UTF-8"?>
                     <svg enable-background="new 0 0 100 100" version="1.1" viewBox="0 0 100 100" xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg">
                         <style type="text/css">
@@ -236,7 +235,6 @@
                 <label for="password">Password:</label>
                 <div class="icon">
 
-                    <?xml version="1.0" encoding="UTF-8"?>
                     <svg enable-background="new 0 0 24 24" version="1.1" viewBox="0 0 24 24" xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg">
                         <style type="text/css">

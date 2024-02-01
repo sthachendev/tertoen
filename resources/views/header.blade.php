@@ -79,7 +79,7 @@
 
 <body>
 
-    <header style="background-color: #24408F;">
+    <header style="background: #24408F url('{{ asset('images/cloud.png') }}');">
 
         <div class="d-flex justify-content-between ms-5 ">
             <!-- header above the navs -->
@@ -94,7 +94,7 @@
                 </div>
             </div>
             <!-- social media links -->
-            <div style="background: #4F5B9E;" class="d-flex ps-3 py-2 me-5">
+            <div style="background: rgba(79, 91, 158, 0.5);" class="d-flex ps-3 py-2 me-5">
                 <a href="https://www.facebook.com/YourFacebookPage"
                     class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                     style="width: 30px; height: 30px; border-radius: 50%;">
@@ -125,7 +125,10 @@
         </div>
 
         {{-- nav bar --}}
-        <nav class="navbar navbar-expand-md py-4" style="background:#fff; padding: 0 10% 0 10%;">
+        <nav class="navbar navbar-expand-md py-4" style="
+        background: #fff url('{{ asset('images/wheel.png') }}') right/cover no-repeat;
+         background-size: auto 80%;
+          padding: 0 10% 0 10%;">
 
             {{-- <a href="/" class="navbar-brand d-none d-md-inline"> --}}
             <img src="{{ asset('images/logo.png') }}" alt="logo" style="max-width:7%;">
@@ -176,7 +179,7 @@
                 <button
                     onclick="window.location.href='/donate'"class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 mt-md-0 d-md-none"
                     style="border-radius:20px; font-size:12px;">
-                    DONATE
+                    SUPPORT
                 </button>
 
             </div>
@@ -184,7 +187,7 @@
             <button onclick="window.location.href='/donate'"
                 class="btn btn-sm btn-warning text-light px-3 py-2 mt-3 mt-md-0 d-none d-md-block"
                 style="border-radius:20px; font-size:12px;">
-                DONATE
+                SUPPORT
             </button>
 
         </nav>

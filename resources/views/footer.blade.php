@@ -29,7 +29,7 @@
 
 <body>
 
-    <footer class="text-light py-4" style="background:#24408F;">
+    <footer class="text-light py-4" style="background: #24408F url('{{ asset('images/cloud.png') }}');">
         <div class="container">
             <div class="row p-3">
                 <!-- Left side with text logo and social media icons -->
@@ -85,7 +85,7 @@
                 </div>
 
                 <!-- Right side with quick links -->
-                <div class="col-md-6 text-md-end" style="background:#4F5B9E">
+                <div class="col-md-6 text-md-end" style="background:rgba(79, 91, 158, 0.5);">
                     <div class="d-flex justify-content-around p-3">
 
                         <div class="d-flex flex-column p-3 text-start">

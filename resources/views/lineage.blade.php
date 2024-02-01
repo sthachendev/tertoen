@@ -17,6 +17,9 @@
             main {
                 margin: 0 !important;
             }
+            h4{
+                font-size: 16px !important;
+            }
         }
     </style>
 </head>

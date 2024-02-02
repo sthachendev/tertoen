@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row p-3">
                 <!-- Left side with text logo and social media icons -->
-                <div class="col-md-6 text-md-start mb-3 mb-md-0" id="text-logo" >
+                <div class="col-md-6 text-md-start mb-3 mb-md-0" id="text-logo">
                     <span class="fw-bold fs-4 text-light">
                         BAYUEL KINZANG YOESEL
                         <br>
@@ -41,14 +41,14 @@
                     </span>
                     <div class="my-4 d-flex">
                         <!-- Add your social media icons here -->
-                        <a href="https://www.facebook.com/YourFacebookPage"
+                        <a href="https://www.facebook.com/profile.php?id=100093656465335&mibextid=ZbWKwL"
                             class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                             style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
                             rel="noopener noreferrer">
                             <i class="fab fa-facebook"></i>
                         </a>
 
-                        <a href="https://www.instagram.com/YourInstagramUsername"
+                        {{-- <a href="https://www.instagram.com/YourInstagramUsername"
                             class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                             style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
                             rel="noopener noreferrer">
@@ -60,9 +60,9 @@
                             style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
                             rel="noopener noreferrer">
                             <i class="fab fa-twitter"></i>
-                        </a>
+                        </a> --}}
 
-                        <a href="https://t.me/YourTelegramUsername"
+                        <a href="https://t.me/+NnaNv2k7GW9hY2Zl"
                             class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                             style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
                             rel="noopener noreferrer">
@@ -89,25 +89,30 @@
                     <div class="d-flex justify-content-around p-3">
 
                         <div class="d-flex flex-column p-3 text-start">
-                            <h6 class="text-light mb-3">Get Involved</h6>
-                            <a href="/centres" class="text-light text-decoration-none mb-2 mt-2"
+                            <h6 class="text-light mb-3 border-bottom border-secondary">Get Involved</h6>
+                            <a href="/centres" class="text-light text-decoration-none mb-2"
                                 style="font-size:12px">CENTRES</a>
-                            <a href="#" class="text-light text-decoration-none mb-2 mt-2"
+                            <a href="/activities" class="text-light text-decoration-none mb-2 mt-2"
                                 style="font-size:12px">ACTIVITIES</a>
-                            <a href="#" class="text-light text-decoration-none mb-2 mt-2" style="font-size:12px">ABOUT US</a>
-                            <a href="/donate" class="text-light text-decoration-none mb-2 mt-2" 
+                            <a href="/about-us" class="text-light text-decoration-none mb-2 mt-2"
+                                style="font-size:12px">ABOUT US</a>
+                            <a href="/donate" class="text-light text-decoration-none mb-2 mt-2"
                                 style="font-size:12px">SUPPORT US</a>
                         </div>
 
                         <div class="d-flex flex-column p-3 text-start">
-                            <h6 class="text-light mb-3">Contact Us</h6>
-                            <span class="text-light text-decoration-none mb-2" style="font-size:12px">Olakha</span>
-                            <span class="text-light text-decoration-none" style="font-size:12px">Thimphu, Bhutan</span>
+                            <h6 class="text-light mb-3 border-bottom border-secondary">Contact Us</h6>
+                            <span class="text-light text-decoration-none mb-2" style="font-size:12px">Flat No.32,
+                                Building No.5,</span>
+                            <span class="text-light text-decoration-none mb-2" style="font-size:12px">Changzamtog, Thim
+                                Throm,</span>
+                            <span class="text-light text-decoration-none" style="font-size:12px">Thimphu 11001,
+                                Bhutan</span>
                             <br>
                             <span class="text-light text-decoration-none mb-2" style="font-size:12px">Email:
-                                info@peldrukdraling.org</span>
+                                drukbkwcfoundation@gmail.com</span>
                             <span class="text-light text-decoration-none" style="font-size:12px">Phone:
-                                +975-17618421</span>
+                                +975-77600980</span>
                         </div>
 
                     </div>

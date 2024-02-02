@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,28 +87,28 @@
             <div class="d-flex justify-content-space-around align-items-center py-2">
 
                 <div class="me-4 text-light d-none d-sm-inline" style="font-size:12px;">
-                    <i class="fa-solid fa-phone me-1"></i>+975-17618421
+                    <i class="fa-solid fa-phone me-1"></i>+975-77600980
                 </div>
 
                 <div class="me-3 text-light" style="font-size:12px">
-                    <i class="fa-solid fa-envelope me-1"></i>info@peldrukdraling.org
+                    <i class="fa-solid fa-envelope me-1"></i>drukbkwcfoundation@gmail.com
                 </div>
             </div>
             <!-- social media links -->
             <div style="background: rgba(79, 91, 158, 0.5);" class="d-flex ps-3 py-2 me-5">
-                <a href="https://www.facebook.com/YourFacebookPage"
+                <a href="https://www.facebook.com/profile.php?id=100093656465335&mibextid=ZbWKwL"
                     class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                     style="width: 30px; height: 30px; border-radius: 50%;">
                     <i class="fab fa-facebook"></i>
                 </a>
 
-                <a href="https://www.instagram.com/YourInstagramUsername"
+                {{-- <a href="https://www.instagram.com/YourInstagramUsername"
                     class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                     style="width: 30px; height: 30px; border-radius: 50%;">
                     <i class="fab fa-instagram"></i>
-                </a>
+                </a> --}}
 
-                <a href="https://t.me/YourTelegramUsername"
+                <a href="https://t.me/+NnaNv2k7GW9hY2Zl"
                     class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                     style="width: 30px; height: 30px; border-radius: 50%;">
                     <i class="fab fa-telegram-plane"></i>
@@ -125,7 +126,8 @@
         </div>
 
         {{-- nav bar --}}
-        <nav class="navbar navbar-expand-md py-4" style="
+        <nav class="navbar navbar-expand-md py-4"
+            style="
         background: #fff url('{{ asset('images/wheel.png') }}') right/cover no-repeat;
          background-size: auto 80%;
           padding: 0 10% 0 10%;">

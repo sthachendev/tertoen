@@ -1,202 +1,91 @@
-<head> 
-    <!-- Include Poppins font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
-    <style>
-        @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-
-        .fa-2x {
-            font-size: 2em;
-        }
-
-        .fa {
-            position: relative;
-            display: table-cell;
-            width: 60px;
-            height: 36px;
-            text-align: center;
-            vertical-align: middle;
-            font-size: 20px;
-        }
-
-
-        .main-menu:hover,
-        nav.main-menu.expanded {
-            width: 250px;
-            overflow: visible;
-        }
-
-        .main-menu {
-            background: #212121;
-            border-right: 1px solid #e5e5e5;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            height: 100%;
-            left: 0;
-            width: 60px;
-            overflow: hidden;
-            -webkit-transition: width .05s linear;
-            transition: width .05s linear;
-            -webkit-transform: translateZ(0) scale(1, 1);
-            z-index: 1000;
-        }
-
-        .main-menu>ul {
-            margin: 7px 0;
-        }
-
-        .main-menu li {
-            position: relative;
-            display: block;
-            width: 250px;
-        }
-
-        .main-menu li>a {
-            position: relative;
-            display: table;
-            border-collapse: collapse;
-            border-spacing: 0;
-            color: #999;
-            font-family: arial;
-            font-size: 14px;
+        a {
             text-decoration: none;
-            -webkit-transform: translateZ(0) scale(1, 1);
-            -webkit-transition: all .1s linear;
-            transition: all .1s linear;
-
+            color: lightgrey;
         }
 
-        .main-menu .nav-icon {
-            position: relative;
-            display: table-cell;
-            width: 60px;
-            height: 36px;
-            text-align: center;
-            vertical-align: middle;
-            font-size: 18px;
+        a:hover {
+            color: white;
         }
 
-        .main-menu .nav-text {
-            color: #fff;
-            position: relative;
-            display: table-cell;
-            vertical-align: middle;
-            width: 190px;
-            /* font-family: 'Titillium Web', sans-serif; */
-        }
-
-        .main-menu>ul.logout {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }
-
-        .no-touch .scrollable.hover {
-            overflow-y: hidden;
-        }
-
-        .no-touch .scrollable.hover:hover {
-            overflow-y: auto;
-            overflow: visible;
-        }
-
-        a:hover,
-        a:focus {
-            text-decoration: none;
-        }
-
-        nav {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            -o-user-select: none;
-            user-select: none;
-        }
-
-        nav ul,
-        nav li {
-            outline: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        .main-menu li:hover>a,
-        nav.main-menu li.active>a,
-        .dropdown-menu>li>a:hover,
-        .dropdown-menu>li>a:focus,
-        .dropdown-menu>.active>a,
-        .dropdown-menu>.active>a:hover,
-        .dropdown-menu>.active>a:focus,
-        .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
-        .dashboard-page nav.dashboard-menu ul li.active a {
-            color: #fff;
-            background-color: #000000;
-        }
-
-        .area {
-            background: #e2e2e2;
-            padding: 1% 5%;
-        }
-
-        @font-face {
-            /* font-family: 'Titillium Web'; */
-            font-style: normal;
-            font-weight: 300;
-            /* src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff'); */
-        }
     </style>
 </head>
-
-<body>
-    <nav class="main-menu">
-        <ul>
-            <li class="has-subnav">
+<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <span class="fs-5 d-none d-sm-inline">Admin Dashboard</span>
+        </a>
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+            <li class="nav-item mt-3">
                 <a href="/admin/events">
-                    <i class="fa fa-book fa-2x"></i>
-                    <span class="nav-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-file-richtext" viewBox="0 0 16 16">
+                        <path
+                            d="M7 4.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208M5 9a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z" />
+                        <path
+                            d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1" />
+                    </svg>
+                    <span class="nav-text d-none d-sm-inline ms-2">
                         Events & Activities
                     </span>
                 </a>
             </li>
-            <li class="has-subnav">
+            <li class="nav-item mt-3">
                 <a href="/admin/gallery">
-                    <i class="fa fa-camera fa-2x"></i>
-                    <span class="nav-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-image-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
+                    </svg>
+                    <span class="nav-text d-none d-sm-inline ms-2">
                         Gallery
                     </span>
                 </a>
             </li>
+            <li class="nav-item mt-3">
+                <a href="/admin/volunteer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                    </svg>
+                    <span class="nav-text d-none d-sm-inline ms-2">
+                        Volunteers
+                    </span>
+                </a>
+            </li>
         </ul>
-
-        <ul class="logout">
+        <hr>
+        <ul class="logoutnav mt-auto" style="list-style-type: none;">
             <li>
                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <i class="fa fa-power-off fa-2x"></i>
-                    <span id="logoutButton" class="nav-text" style="cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                        <path fill-rule="evenodd"
+                            d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                    </svg>
+                    <span id="logoutButton" class="nav-text d-none d-sm-inline ms-2" style="cursor: pointer;">
                         Logout
                     </span>
                 </form>
             </li>
         </ul>
-    </nav>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the logout button element
+        var logoutButton = document.getElementById('logoutButton');
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the logout button element
-            var logoutButton = document.getElementById('logoutButton');
-
-            // Add a click event listener to the logout button
-            logoutButton.addEventListener('click', function() {
-                // Submit the form when the button is clicked
-                document.getElementById('logoutForm').submit();
-            });
+        // Add a click event listener to the logout button
+        logoutButton.addEventListener('click', function() {
+            // Submit the form when the button is clicked
+            document.getElementById('logoutForm').submit();
         });
-    </script>
-
-</body>
+    });
+</script>

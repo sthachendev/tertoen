@@ -77,7 +77,7 @@
                         </a>
                     </div>
                     <div class="my-4 d-flex">
-                        <a href="/membership" class="text-light text-decoration-none">Apply for membership</a>
+                        <a href="/volunteer" class="text-light text-decoration-none">BKWC Foundation Voluntary Services Form</a>
                     </div>
                     <div class="my-4 d-flex">
                         <a href="/admin/login" class="text-light text-decoration-none">Admin login</a>

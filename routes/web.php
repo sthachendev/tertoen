@@ -2,10 +2,12 @@
 
 use App\Models\Activity;
 use App\Models\Gallery;
+use App\Models\Volunteer;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\VolunteerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,8 +68,8 @@ Route::get('/monthlydonate', function () {
     return view('monthly_donate');
 });
 
-Route::get('/membership', function () {
-    return view('membership');
+Route::get('/volunteer', function () {
+    return view('volunteer');
 });
 
 Route::get('/admin/events', function () {
@@ -80,6 +82,13 @@ Route::get('/admin/gallery', function () {
     return view('admin.gallery', compact('images'));
 });
 
+Route::get('/admin/volunteer', function () {
+    // $volunteers = Volunteer::all();        
+    $volunteers = Volunteer::paginate(6); // This will paginate the volunteers with 10 records per page
+
+    return view('admin.volunteer', compact('volunteers'));
+});
+
 Route::post('/gallery-add', [GalleryController::class, 'add'])->name('img.add');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -90,3 +99,6 @@ Route::get('/activities/create', [ActivityController::class, 'create'])->name('a
 Route::post('/activities', [ActivityController::class, 'store'])->name('activities.store');
 Route::get('/activities/{title}', [ActivityController::class, 'show'])->name('activities.show');
 Route::delete('/activities/{id}', [ActivityController::class, 'destroy'])->name('activity.delete');
+
+// Store the form data
+Route::post('/volunteer/store', [VolunteerController::class, 'store'])->name('volunteer.store');

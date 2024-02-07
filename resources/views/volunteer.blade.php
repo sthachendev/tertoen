@@ -147,71 +147,69 @@
 
 
         <label>Please select the box next to the Area(s) of Voluntary Service You Are Interested In:</label>
-
         <label for="socialActivities">
-            <input type="checkbox" id="socialActivities" name="areasOfInterest" value="socialActivities">
+            <input type="checkbox" id="socialActivities" name="areasOfInterest[]" value="Social activities for community development and enhancement of living conditions of rural people.">
             Social activities for community development and enhancement of living conditions of rural people.
         </label>
-
+        
         <label for="religiousActivities">
-            <input type="checkbox" id="religiousActivities" name="areasOfInterest" value="religiousActivities">
+            <input type="checkbox" id="religiousActivities" name="areasOfInterest[]" value="Participation in religious activities for the well-being and welfare of everyone and our Country.">
             Participation in religious activities for the well-being and welfare of everyone and our Country.
         </label>
-
+        
         <label for="projectDevelopment">
-            <input type="checkbox" id="projectDevelopment" name="areasOfInterest" value="projectDevelopment">
+            <input type="checkbox" id="projectDevelopment" name="areasOfInterest[]" value="Project development and preparation of religious infrastructures.">
             Project development and preparation of religious infrastructures.
         </label>
-
+        
         <label for="technicalSupport">
-            <input type="checkbox" id="technicalSupport" name="areasOfInterest" value="technicalSupport">
+            <input type="checkbox" id="technicalSupport" name="areasOfInterest[]" value="Engineering and technical support in the preparation of drawings and estimates.">
             Engineering and technical support in the preparation of drawings and estimates.
         </label>
-
+        
         <label for="fieldSurvey">
-            <input type="checkbox" id="fieldSurvey" name="areasOfInterest" value="fieldSurvey">
+            <input type="checkbox" id="fieldSurvey" name="areasOfInterest[]" value="Development of project feasibility and field survey works.">
             Development of project feasibility and field survey works.
         </label>
-
+        
         <label for="internationalFunding">
-            <input type="checkbox" id="internationalFunding" name="areasOfInterest" value="internationalFunding">
+            <input type="checkbox" id="internationalFunding" name="areasOfInterest[]" value="Preparation of projects for seeking international funding sources.">
             Preparation of projects for seeking international funding sources.
         </label>
-
+        
         <label for="socialSupport">
-            <input type="checkbox" id="socialSupport" name="areasOfInterest" value="socialSupport">
-            Social support activities and physical initiatives to improve the food and clothing security of
-            underprivileged people.
+            <input type="checkbox" id="socialSupport" name="areasOfInterest[]" value="Social support activities and physical initiatives to improve the food and clothing security of underprivileged people.">
+            Social support activities and physical initiatives to improve the food and clothing security of underprivileged people.
         </label>
-
+        
         <label for="fundraising">
-            <input type="checkbox" id="fundraising" name="areasOfInterest" value="fundraising">
+            <input type="checkbox" id="fundraising" name="areasOfInterest[]" value="Participating in fundraising programs and religious event hosting.">
             Participating in fundraising programs and religious event hosting.
         </label>
-
+        
         <label for="webDevelopment">
-            <input type="checkbox" id="webDevelopment" name="areasOfInterest" value="webDevelopment">
+            <input type="checkbox" id="webDevelopment" name="areasOfInterest[]" value="Web-page & App development, photography, audio and visual documentation, digital and IT services.">
             Web-page & App development, photography, audio and visual documentation, digital and IT services.
         </label>
-
+        
         <label for="constructionMaterials">
-            <input type="checkbox" id="constructionMaterials" name="areasOfInterest" value="constructionMaterials">
+            <input type="checkbox" id="constructionMaterials" name="areasOfInterest[]" value="Donation of construction materials like cement, bricks, stone boulders, sand and aggregate.">
             Donation of construction materials like cement, bricks, stone boulders, sand and aggregate.
         </label>
-
+        
         <label for="hardwareMaterials">
-            <input type="checkbox" id="hardwareMaterials" name="areasOfInterest" value="hardwareMaterials">
+            <input type="checkbox" id="hardwareMaterials" name="areasOfInterest[]" value="Donation of hardware materials like CGI Sheets, sanitary, plumbing and electrical items.">
             Donation of hardware materials like CGI Sheets, sanitary, plumbing and electrical items.
         </label>
-
+        
         <label for="monetaryContributions">
-            <input type="checkbox" id="monetaryContributions" name="areasOfInterest" value="monetaryContributions">
+            <input type="checkbox" id="monetaryContributions" name="areasOfInterest[]" value="Monetary contributions and donations.">
             Monetary contributions and donations.
         </label>
-
+        
         <br>
         <label for="physicalContributions">
-            <input type="checkbox" id="physicalContributions" name="areasOfInterest" value="physicalContributions">
+            <input type="checkbox" id="physicalContributions" name="areasOfInterest[]" value="Physical and manual contributions.">
             Physical and manual contributions.
         </label>
 

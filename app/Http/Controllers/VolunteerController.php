@@ -39,9 +39,13 @@ class VolunteerController extends Controller
             // 'email' => 'required|email',
             // 'phone' => 'required|string',
             // 'mailingAddress' => 'required|string',
-            // 'areasOfInterest' => 'nullable|string',
+            // 'areasOfInterest' => 'nullable|array', // Make sure areasOfInterest is an array
+            // 'areasOfInterest.*' => 'string', // Ensure each value in areasOfInterest array is a string
             // 'declaration' => 'required|boolean',
         ]);
+
+        // implode(', ', $request->areasOfInterest);
+        $request->merge(['areasOfInterest' => json_encode($request->areasOfInterest)]);
 
         Volunteer::create($request->all());
 

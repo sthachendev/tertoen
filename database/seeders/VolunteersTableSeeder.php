@@ -31,7 +31,21 @@ class VolunteersTableSeeder extends Seeder
                 'email' => $faker->unique()->safeEmail,
                 'phone' => $faker->phoneNumber,
                 'mailingAddress' => $faker->address,
-                'areasOfInterest' => $faker->text,
+                'areasOfInterest' => json_encode($faker->randomElements([
+                    'socialActivities',
+                    'religiousActivities',
+                    'projectDevelopment',
+                    'technicalSupport',
+                    'fieldSurvey',
+                    'internationalFunding',
+                    'socialSupport',
+                    'fundraising',
+                    'webDevelopment',
+                    'constructionMaterials',
+                    'hardwareMaterials',
+                    'monetaryContributions',
+                    'physicalContributions',
+                ], $faker->numberBetween(1, 5))),
             ]);
         }
     }

@@ -65,25 +65,68 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <ul>
-                        <li><strong>Full Name:</strong> <span id="modal-fullname"></span></li>
-                        <li><strong>Date of Birth:</strong> <span id="modal-dob"></span></li>
-                        <li><strong>Gender:</strong> <span id="modal-gender"></span></li>
-                        <li><strong>CID:</strong> <span id="modal-cid"></span></li>
-                        <li><strong>Village:</strong> <span id="modal-village"></span></li>
-                        <li><strong>Geog:</strong> <span id="modal-geog"></span></li>
-                        <li><strong>Dzongkhag:</strong> <span id="modal-dzongkhag"></span></li>
-                        <li><strong>Nationality:</strong> <span id="modal-nationality"></span></li>
-                        <li><strong>Mailing Address:</strong> <span id="modal-mailingAddress"></span></li>
-                        <li><strong>Email:</strong> <span id="modal-email"></span></li>
-                        <li><strong>Phone Number:</strong> <span id="modal-phone"></span></li>
-                        <li><strong>Areas of Interest:</strong> <span id="modal-areasOfInterest"></span></li>
-                    </ul>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>Full Name</td>
+                            <td><span id="modal-fullname"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td><span id="modal-dob"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td><span id="modal-gender"></span></td>
+                        </tr>
+                        <tr>
+                            <td>CID</td>
+                            <td><span id="modal-cid"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Village</td>
+                            <td><span id="modal-village"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Geog</td>
+                            <td><span id="modal-geog"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Dzongkhag</td>
+                            <td><span id="modal-dzongkhag"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Nationality</td>
+                            <td><span id="modal-nationality"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Mailing Address</td>
+                            <td><span id="modal-mailingAddress"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><span id="modal-email"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td>
+                            <td><span id="modal-phone"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Areas of Interest</td>
+                            <td>
+                                <ul id="modal-areasOfInterest">
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-body" style="display:flex; justify-content:space-around; padding-bottom:2rem;">
+                    <button class="btn btn-sm btn-outline-danger">Delete</button>
+                    <button class="btn btn-sm btn-outline-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Close</button>
                 </div>
             </div>
         </div>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -102,11 +145,17 @@
                     'data-mailingAddress');
                 document.getElementById('modal-email').textContent = row.getAttribute('data-email');
                 document.getElementById('modal-phone').textContent = row.getAttribute('data-phone');
-                document.getElementById('modal-areasOfInterest').textContent = row.getAttribute(
-                    'data-areasOfInterest');
+
+                var areasOfInterest = JSON.parse(row.getAttribute('data-areasOfInterest'));
+                var areasList = '';
+                areasOfInterest.forEach(area => {
+                    areasList += '<li class="mb-2">' + area + '</li>';
+                });
+                document.getElementById('modal-areasOfInterest').innerHTML = areasList;
             });
         });
     </script>
+
 </body>
 
 </html>

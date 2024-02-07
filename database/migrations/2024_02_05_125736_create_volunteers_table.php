@@ -26,7 +26,7 @@ class CreateVolunteersTable extends Migration
             $table->string('email');
             $table->string('phone');
             $table->text('mailingAddress');
-            $table->text('areasOfInterest')->nullable();
+            $table->json('areasOfInterest')->nullable(); // Change data type to json
             $table->timestamps();
         });
     }

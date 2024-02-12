@@ -77,7 +77,8 @@
                         </a>
                     </div>
                     <div class="my-4 d-flex">
-                        <a href="/volunteer" class="text-light text-decoration-none">BKWC Foundation Voluntary Services Form</a>
+                        <a href="/volunteer" class="text-light text-decoration-none">BKWC Foundation Voluntary Services
+                            Form</a>
                     </div>
                     <div class="my-4 d-flex">
                         <a href="/admin/login" class="text-light text-decoration-none">Admin login</a>
@@ -89,7 +90,7 @@
                     <div class="d-flex justify-content-around p-3">
 
                         <div class="d-flex flex-column p-3 text-start">
-                            <h6 class="text-light mb-3 border-bottom border-secondary">Get Involved</h6>
+                            <h6 class="text-light mb-4 border-0 border-secondary">Get Involved</h6>
                             <a href="/centres" class="text-light text-decoration-none mb-2"
                                 style="font-size:12px">CENTRES</a>
                             <a href="/activities" class="text-light text-decoration-none mb-2 mt-2"
@@ -101,7 +102,7 @@
                         </div>
 
                         <div class="d-flex flex-column p-3 text-start">
-                            <h6 class="text-light mb-3 border-bottom border-secondary">Contact Us</h6>
+                            <h6 class="text-light mb-4 border-0 border-secondary">Contact Us</h6>
                             <span class="text-light text-decoration-none mb-2" style="font-size:12px">Flat No.32,
                                 Building No.5,</span>
                             <span class="text-light text-decoration-none mb-2" style="font-size:12px">Changzamtog, Thim

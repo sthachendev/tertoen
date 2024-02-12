@@ -28,11 +28,11 @@
                 @endif
 
                 @if (Session::has('error'))
-                    <div class="alert alert-danger alert-dismissible fade show">
+                    <div class="alert alert-danger alert-dismissible fade show ms-5 me-5">
                         {{ Session::get('error') }}
                         <span class="close" style="cursor: pointer;" onclick="this.parentElement.style.display='none';"
                             aria-label="Close">
-                            <span class="material-symbols-outlined" style="font-size: 1.25rem;">close</span>
+                            <span class="btn-close"></span>
                         </span>
                     </div>
                 @endif

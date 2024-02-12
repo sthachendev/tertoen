@@ -37,44 +37,52 @@
                     </div>
                 @endif
 
-                <table class="table table-bordered table-striped">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Full Name</th>
-                            <th scope="col">Gender</th>
-                            <th scope="col">CID</th>
-                            <th scope="col">Dzongkhag</th>
-                            <th scope="col">Nationality</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Phone Number</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-hover">
-                        @foreach ($volunteers as $volunteer)
-                            <tr class="volunteer-row" style="cursor: pointer" data-bs-toggle="modal"
-                                data-bs-target="#volunteerModal" data-fullname="{{ $volunteer->fullName }}"
-                                data-gender="{{ $volunteer->gender }}" data-cid="{{ $volunteer->cid }}"
-                                data-dzongkhag="{{ $volunteer->dzongkhag }}"
-                                data-nationality="{{ $volunteer->nationality }}" data-email="{{ $volunteer->email }}"
-                                data-dob="{{ $volunteer->dob }}" data-village="{{ $volunteer->village }}"
-                                data-phone="{{ $volunteer->phone }}" data-geog="{{ $volunteer->geog }}"
-                                data-mailingAddress="{{ $volunteer->mailingAddress }}" data-id="{{ $volunteer->id }}"
-                                data-areasOfInterest="{{ $volunteer->areasOfInterest }}">
-                                <td>{{ $volunteer->id }}</td>
-                                <td>{{ $volunteer->fullName }}</td>
-                                <td>{{ $volunteer->gender }}</td>
-                                <td>{{ $volunteer->cid }}</td>
-                                <td>{{ $volunteer->dzongkhag }}</td>
-                                <td>{{ $volunteer->nationality }}</td>
-                                <td>{{ $volunteer->email }}</td>
-                                <td>{{ $volunteer->phone }}</td>
+                @if ($volunteers->isEmpty())
+                    <div class="alert alert-warning" role="alert">
+                        No volunteers found.
+                    </div>
+                @else
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">CID</th>
+                                <th scope="col">Dzongkhag</th>
+                                <th scope="col">Nationality</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone Number</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                <div class="mt-5">
-                    {{ $volunteers->links('pagination::bootstrap-5') }}
-                </div>
+                        </thead>
+                        <tbody class="table-hover">
+                            @foreach ($volunteers as $volunteer)
+                                <tr class="volunteer-row" style="cursor: pointer" data-bs-toggle="modal"
+                                    data-bs-target="#volunteerModal" data-fullname="{{ $volunteer->fullName }}"
+                                    data-gender="{{ $volunteer->gender }}" data-cid="{{ $volunteer->cid }}"
+                                    data-dzongkhag="{{ $volunteer->dzongkhag }}"
+                                    data-nationality="{{ $volunteer->nationality }}"
+                                    data-email="{{ $volunteer->email }}" data-dob="{{ $volunteer->dob }}"
+                                    data-village="{{ $volunteer->village }}" data-phone="{{ $volunteer->phone }}"
+                                    data-geog="{{ $volunteer->geog }}"
+                                    data-mailingAddress="{{ $volunteer->mailingAddress }}"
+                                    data-id="{{ $volunteer->id }}"
+                                    data-areasOfInterest="{{ $volunteer->areasOfInterest }}">
+                                    <td>{{ $volunteer->id }}</td>
+                                    <td>{{ $volunteer->fullName }}</td>
+                                    <td>{{ $volunteer->gender }}</td>
+                                    <td>{{ $volunteer->cid }}</td>
+                                    <td>{{ $volunteer->dzongkhag }}</td>
+                                    <td>{{ $volunteer->nationality }}</td>
+                                    <td>{{ $volunteer->email }}</td>
+                                    <td>{{ $volunteer->phone }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    <div class="mt-5">
+                        {{ $volunteers->links('pagination::bootstrap-5') }}
+                    </div>
+                @endif
             </div>
         </div>
     </div>

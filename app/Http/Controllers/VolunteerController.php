@@ -26,6 +26,13 @@ class VolunteerController extends Controller
     public function store(Request $request)
     {
 
+        // Check if CID already exists
+        $existingVolunteer = Volunteer::where('cid', $request->input('cid'))->first();
+
+        if ($existingVolunteer) {
+            return back()->with('error', 'You have already been registered.');
+        }
+
         // Validation - You can customize the validation rules as needed
         $request->validate([
             // 'fullName' => 'required|string',
@@ -50,7 +57,9 @@ class VolunteerController extends Controller
         Volunteer::create($request->all());
 
         // You can customize the redirect URL as needed
-        return response()->json(['message' => 'ok.']);
+        // return response()->json(['message' => 'ok.']);
+        return back()->with('success', 'You have been registered.');
+
     }
 
     public function destroy($id)
@@ -61,6 +70,6 @@ class VolunteerController extends Controller
         // Delete the volunteer
         $volunteer->delete();
 
-        return back()->with('success', 'Volunteer deleted successfully.');
+        return back()->with('success', 'Volunteer data have been deleted.');
     }
 }

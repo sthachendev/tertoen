@@ -92,13 +92,13 @@
                         <div class="d-flex flex-column p-3 text-start">
                             <h6 class="text-light mb-4 border-0 border-secondary">Get Involved</h6>
                             <a href="/centres" class="text-light text-decoration-none mb-2"
-                                style="font-size:12px">CENTRES</a>
+                                style="font-size:12px">Centres</a>
                             <a href="/activities" class="text-light text-decoration-none mb-2 mt-2"
-                                style="font-size:12px">ACTIVITIES</a>
+                                style="font-size:12px">Activities</a>
                             <a href="/about-us" class="text-light text-decoration-none mb-2 mt-2"
-                                style="font-size:12px">ABOUT US</a>
+                                style="font-size:12px">About us</a>
                             <a href="/donate" class="text-light text-decoration-none mb-2 mt-2"
-                                style="font-size:12px">SUPPORT US</a>
+                                style="font-size:12px">Support us</a>
                         </div>
 
                         <div class="d-flex flex-column p-3 text-start">

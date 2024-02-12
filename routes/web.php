@@ -83,8 +83,8 @@ Route::get('/admin/gallery', function () {
 });
 
 Route::get('/admin/volunteer', function () {
-    // $volunteers = Volunteer::all();        
-    $volunteers = Volunteer::paginate(6); // This will paginate the volunteers with 10 records per page
+    // lastest data first
+    $volunteers = Volunteer::orderBy('created_at', 'desc')->paginate(6);
 
     return view('admin.volunteer', compact('volunteers'));
 });
@@ -102,3 +102,4 @@ Route::delete('/activities/{id}', [ActivityController::class, 'destroy'])->name(
 
 // Store the form data
 Route::post('/volunteer/store', [VolunteerController::class, 'store'])->name('volunteer.store');
+Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy'])->name('volunteers.destroy');

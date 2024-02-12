@@ -52,4 +52,15 @@ class VolunteerController extends Controller
         // You can customize the redirect URL as needed
         return response()->json(['message' => 'ok.']);
     }
+
+    public function destroy($id)
+    {
+        // Find the volunteer by ID
+        $volunteer = Volunteer::findOrFail($id);
+
+        // Delete the volunteer
+        $volunteer->delete();
+
+        return back()->with('success', 'Volunteer deleted successfully.');
+    }
 }

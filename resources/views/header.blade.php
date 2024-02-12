@@ -132,9 +132,8 @@
          background-size: auto 80%;
           padding: 0 10% 0 10%;">
 
-            {{-- <a href="/" class="navbar-brand d-none d-md-inline"> --}}
-            <img src="{{ asset('images/logo.png') }}" alt="logo" style="max-width:7%;">
-            {{-- </a> --}}
+            <img id="logo" src="{{ asset('images/logo.png') }}" alt="logo"
+                style="max-width: 7%; cursor: pointer;">
 
             <!-- icon when the nav collapse -->
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -198,6 +197,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        //click on image to rediret to homepage
+        document.getElementById('logo').addEventListener('click', function() {
+            window.location.href = "/";
+        });
+
         // Get the current URL path
         var path = window.location.pathname;
 

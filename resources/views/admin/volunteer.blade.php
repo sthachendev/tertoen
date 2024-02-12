@@ -11,10 +11,32 @@
 
 <body>
     <div class="container-fluid">
+
         <div class="row flex-nowrap">
             @include('admin.nav')
             <div class="col py-3" style="overflow-y: scroll; height:100vh">
                 <h3 style="text-align: center;" class="my-2 mb-3">Volunteer</h3>
+
+                @if (Session::has('success'))
+                    <div class="alert alert-success alert-dismissible fade show">
+                        {{ Session::get('success') }}
+                        <span class="close" style="cursor: pointer;" onclick="this.parentElement.style.display='none';"
+                            aria-label="Close">
+                            <span class="btn-close"></span>
+                        </span>
+                    </div>
+                @endif
+
+                @if (Session::has('error'))
+                    <div class="alert alert-danger alert-dismissible fade show">
+                        {{ Session::get('error') }}
+                        <span class="close" style="cursor: pointer;" onclick="this.parentElement.style.display='none';"
+                            aria-label="Close">
+                            <span class="material-symbols-outlined" style="font-size: 1.25rem;">close</span>
+                        </span>
+                    </div>
+                @endif
+
                 <table class="table table-bordered table-striped">
                     <thead class="thead-dark">
                         <tr>
@@ -36,8 +58,9 @@
                                 data-nationality="{{ $volunteer->nationality }}" data-email="{{ $volunteer->email }}"
                                 data-dob="{{ $volunteer->dob }}" data-village="{{ $volunteer->village }}"
                                 data-phone="{{ $volunteer->phone }}" data-geog="{{ $volunteer->geog }}"
-                                data-mailingAddress="{{ $volunteer->mailingAddress }}"
+                                data-mailingAddress="{{ $volunteer->mailingAddress }}" data-id="{{ $volunteer->id }}"
                                 data-areasOfInterest="{{ $volunteer->areasOfInterest }}">
+                                <td>{{ $volunteer->id }}</td>
                                 <td>{{ $volunteer->fullName }}</td>
                                 <td>{{ $volunteer->gender }}</td>
                                 <td>{{ $volunteer->cid }}</td>
@@ -120,7 +143,25 @@
                     </table>
                 </div>
                 <div class="modal-body" style="display:flex; justify-content:space-around; padding-bottom:2rem;">
-                    <button class="btn btn-sm btn-outline-danger">Delete</button>
+                    <form id="delete-volunteer-form" action="{{ route('volunteers.destroy', $volunteer->id) }}"
+                        method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="button" id="showDeleteDialog"
+                            class="btn btn-sm btn-outline-danger">Delete</button>
+                    </form>
+
+                    <dialog id="deleteDialog" class="bg-light p-4"
+                        style="border-radius: 10px; border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                        <p style="font-size: 16px; margin-bottom: 20px;">Are you sure you want to delete this volunteer
+                            data?</p>
+                        <button id="confirmDelete"
+                            style="background-color: #dc3545; color: #fff; border: none; padding: 8px 16px; margin-right: 10px; border-radius: 5px; cursor: pointer;">Yes,
+                            delete</button>
+                        <button id="cancelDelete"
+                            style="background-color: #ddd; color: #333; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Cancel</button>
+                    </dialog>
+
                     <button class="btn btn-sm btn-outline-secondary" data-bs-dismiss="modal"
                         aria-label="Close">Close</button>
                 </div>
@@ -130,8 +171,31 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        const deleteButton = document.getElementById('showDeleteDialog');
+        const deleteDialog = document.getElementById('deleteDialog');
+        const confirmDeleteButton = document.getElementById('confirmDelete');
+        const cancelDeleteButton = document.getElementById('cancelDelete');
+
+        deleteButton.addEventListener('click', function() {
+            deleteDialog.showModal();
+        });
+
+        confirmDeleteButton.addEventListener('click', function() {
+            // Submit the form when the user confirms deletion
+            document.getElementById('delete-volunteer-form').submit();
+        });
+
+        cancelDeleteButton.addEventListener('click', function() {
+            // Hide the dialog box when the user cancels deletion
+            deleteDialog.close();
+        });
+
         document.querySelectorAll('.volunteer-row').forEach(row => {
             row.addEventListener('click', function() {
+
+                var form = document.getElementById('delete-volunteer-form');
+                form.action = form.action.replace(/\/\d+$/, '/' + row.getAttribute('data-id'));
+
                 document.getElementById('modal-fullname').textContent = row.getAttribute('data-fullname');
                 document.getElementById('modal-dob').textContent = row.getAttribute('data-dob');
                 document.getElementById('modal-gender').textContent = row.getAttribute('data-gender');
@@ -154,6 +218,9 @@
                 document.getElementById('modal-areasOfInterest').innerHTML = areasList;
             });
         });
+
+        // Get the volunteer ID from the span element and set it as the action for the form
+        var volunteerId = document.getElementById('modal-id').textContent;
     </script>
 
 </body>

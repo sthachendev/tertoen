@@ -89,6 +89,8 @@ Route::get('/admin/volunteer', function () {
     return view('admin.volunteer', compact('volunteers'));
 });
 
+Route::get('/admin/search', [VolunteerController::class, 'search'])->name('admin.search');
+
 Route::post('/gallery-add', [GalleryController::class, 'add'])->name('img.add');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

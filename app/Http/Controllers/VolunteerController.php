@@ -72,4 +72,19 @@ class VolunteerController extends Controller
 
         return back()->with('success', 'Volunteer data have been deleted.');
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+
+        $volunteers = Volunteer::where(function ($query) use ($search) {
+            $query->where('fullname', 'like', "%$search%")
+                ->orWhere('cid', 'like', "%$search%")
+                ->orWhere('email', 'like', "%$search%");
+        })
+            ->paginate(10); // adjust the number per page as needed
+
+        return view('admin.volunteer', ['volunteers' => $volunteers]);
+    }
+
 }

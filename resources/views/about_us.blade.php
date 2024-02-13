@@ -239,6 +239,11 @@
         Conduct that all of its members must adhere to, besides conducting several trainings and workshops to hone and
         meliorate the quality of religious organization.
     </p>
+
+    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary mt-3" data-aos="fade-right">
+       <a href="/downloads/BAYUEL.pdf">Download</a> vision and objectives of <strong>Baeyuel Kuenzang Woesel Choeling Foundation (BKWC Foundation)</strong> (Dzongkha Version).
+    </p>
+
     <h4 id="title" class="text-center my-3" data-aos="fade-right">
         BOARD OF DIRECTORS
     </h4>

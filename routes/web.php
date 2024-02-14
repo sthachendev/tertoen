@@ -42,8 +42,8 @@ Route::get('/gallery', function () {
     return view('gallery', compact('images'));
 });
 
-Route::get('/centres', function () {
-    return view('centres');
+Route::get('/oraganogram', function () {
+    return view('oraganogram');
 });
 
 Route::get('/activities', function () {

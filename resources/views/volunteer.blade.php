@@ -197,7 +197,8 @@
         <textarea id="mailingAddress" name="mailingAddress" required maxlength="200"></textarea>
         <br><br>
 
-        <label for="areasOfInterestSelected" style="font-weight:bold;">Please select the box next to the Area(s) of
+        <label for="areasOfInterestSelected" style="font-weight:bold; font-size:18px;">Please select the box next to
+            the Area(s) of
             Voluntary Service You Are
             Interested In:
             <!-- Hidden input field to track checkbox selection -->

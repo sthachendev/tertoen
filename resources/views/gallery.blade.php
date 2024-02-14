@@ -80,12 +80,12 @@
 
     @Include('header')
 
-    <h5 style="font-weight: 100" data-aos="fade-right" class="text-center mb-4">Gallery</h5>
+    <h5 style="font-weight: 100" class="text-center mb-4">Gallery</h5>
 
     <div class="text-center text-secondary">
         @if (count($images) > 0)
             <main class="main">
-                <div class="container mb-5" data-aos="fade-right">
+                <div class="container mb-5">
                     @foreach ($images as $image)
                         <div class="card">
                             <div class="card-image">
@@ -102,7 +102,7 @@
             No images available
         @endif
     </div>
-    
+
     @Include('footer')
 
     <script>

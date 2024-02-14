@@ -90,6 +90,33 @@
             box-shadow: none !important;
 
         }
+
+        body {
+            --sb-track-color: #ffffff;
+            --sb-thumb-color: #5a5a5a;
+            --sb-size: 16px;
+        }
+
+        body::-webkit-scrollbar {
+            width: var(--sb-size)
+        }
+
+        body::-webkit-scrollbar-track {
+            background: var(--sb-track-color);
+            border-radius: 15px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: var(--sb-thumb-color);
+            border-radius: 15px;
+            border: 2px solid #ffffff;
+        }
+
+        @supports not selector(::-webkit-scrollbar) {
+            body {
+                scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+            }
+        }
     </style>
 
     {{-- anime on scroll --}}
@@ -173,17 +200,17 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="/centres" class="text-decoration-none me-4">CENTRES
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
                         <a href="/activities" class="text-decoration-none me-4">ACTIVITIES
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a href="/gallery" class="text-decoration-none me-4">GALLERY
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/oraganogram" class="text-decoration-none me-4">ORAGANOGRAM
                         </a>
                     </li>
 

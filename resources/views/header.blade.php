@@ -76,9 +76,17 @@
 
     {{-- anime on scroll --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+
+    {{-- loading --}}
+    <link rel="stylesheet" href="{{ asset('css/loading.css') }}">
 </head>
 
 <body>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="loading">
+        <img src="{{ asset('images/wheel1.png') }}" alt="Loading..." class="spinner">
+    </div>
 
     <header style="background: #24408F url('{{ asset('images/cloud.png') }}');">
 
@@ -91,8 +99,11 @@
                 </div>
 
                 <div class="me-3 text-light" style="font-size:12px">
-                    <i class="fa-solid fa-envelope me-1"></i>drukbkwcfoundation@gmail.com
+                    <i class="fa-solid fa-envelope me-1"></i>
+                    <a href="mailto:drukbkwcfoundation@gmail.com" class="text-light"
+                        style="text-decoration: none;">drukbkwcfoundation@gmail.com</a>
                 </div>
+
             </div>
             <!-- social media links -->
             <div style="background: rgba(79, 91, 158, 0.5);" class="d-flex ps-3 py-2 me-5">
@@ -115,7 +126,7 @@
                 </a>
 
                 {{-- <div class="d-none d-sm-inline">hides telegram icon on sm screen --}}
-                <a href="https://wa.me/1234567890"
+                <a href="https://wa.me/77600980"
                     class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                     style="width: 30px; height: 30px; border-radius: 50%;">
                     <i class="fab fa-whatsapp"></i>

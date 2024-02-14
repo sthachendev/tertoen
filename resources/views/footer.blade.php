@@ -69,7 +69,7 @@
                             <i class="fab fa-telegram-plane"></i>
                         </a>
 
-                        <a href="https://wa.me/1234567890"
+                        <a href="https://wa.me/77600980"
                             class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                             style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
                             rel="noopener noreferrer">
@@ -110,8 +110,11 @@
                             <span class="text-light text-decoration-none" style="font-size:12px">Thimphu 11001,
                                 Bhutan</span>
                             <br>
-                            <span class="text-light text-decoration-none mb-2" style="font-size:12px">Email:
-                                drukbkwcfoundation@gmail.com</span>
+                            <span class="text-light mb-2" style="font-size:12px">
+                                Email:
+                                <a href="mailto:drukbkwcfoundation@gmail.com"
+                                    class="text-light text-decoration-none">drukbkwcfoundation@gmail.com</a>
+                            </span>
                             <span class="text-light text-decoration-none" style="font-size:12px">Phone:
                                 +975-77600980</span>
                         </div>
@@ -124,6 +127,9 @@
             <div class="text-center" style="font-size:12px"> &copy 2024 BAYUEL KINZANG YOESEL CHOLING FOUNDATION</div>
         </div>
     </footer>
+
+    <!-- Include JavaScript for loading indicator -->
+    <script src="{{ asset('js/loading.js') }}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script>

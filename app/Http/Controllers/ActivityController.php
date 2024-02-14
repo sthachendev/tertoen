@@ -53,7 +53,9 @@ class ActivityController extends Controller
 
         $activity->save();
 
-        return response()->json(['message' => 'Posted.']);
+        return back()->with('success', 'Activity Posted.');
+
+        // return response()->json(['message' => 'Posted.']);
         // return redirect()->route('activities.index')->with('success', 'Activity added successfully!');
     }
 

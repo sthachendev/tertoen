@@ -86,7 +86,7 @@
                                                     @method('delete')
                                                     <button type="button" class="delete-button"
                                                         data-image-id="{{ $image->id }}"
-                                                        style="color: #fff; padding: 10px; border: none; border-radius: 4px;">Delete
+                                                        style="background:#dc3545; color:#fff; padding: 10px; border: none; border-radius: 4px;">Delete
                                                         Image</button>
                                                 </form>
                                             </div>

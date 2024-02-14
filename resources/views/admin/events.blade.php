@@ -109,7 +109,7 @@
                                                     @method('delete')
                                                     <button type="button" class="delete-button"
                                                         data-activity-id="{{ $activity->id }}"
-                                                        style="color: #fff; padding: 10px; border: none; border-radius: 4px;">
+                                                        style="background:#dc3545; color:#fff; padding: 10px; border: none; border-radius: 4px;">
                                                         Delete
                                                     </button>
                                                 </form>

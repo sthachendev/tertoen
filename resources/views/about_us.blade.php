@@ -244,7 +244,7 @@
        <a href="/downloads/BAYUEL.pdf">Download</a> vision and objectives of <strong>Baeyuel Kuenzang Woesel Choeling Foundation (BKWC Foundation)</strong> (Dzongkha Version).
     </p>
 
-    <h4 id="title" class="text-center my-3" data-aos="fade-right">
+    {{-- <h4 id="title" class="text-center my-3" data-aos="fade-right">
         BOARD OF DIRECTORS
     </h4>
 
@@ -291,7 +291,7 @@
                 <span style="font-size: 12px">npelden@yahoo.com</span>
             </figcaption>
         </figure>
-    </div>
+    </div> --}}
 
     <div class="mt-5"></div>
 

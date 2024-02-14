@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SearchController;
 use App\Models\Activity;
 use App\Models\Gallery;
 use App\Models\Volunteer;
@@ -22,12 +23,10 @@ use App\Http\Controllers\VolunteerController;
 
 Route::get('/', function () {
     return view('home');
-    // return view('welcome');
 });
 
 Route::get('/admin/login', function () {
     return view('admin.login');
-    // return view('welcome');
 });
 
 Route::get('/lineage', function () {
@@ -91,17 +90,17 @@ Route::get('/admin/volunteer', function () {
 
 Route::get('/admin/search', [VolunteerController::class, 'search'])->name('admin.search');
 
+Route::get('/search', [SearchController::class, 'search'])->name('search');
+
 Route::post('/gallery-add', [GalleryController::class, 'add'])->name('img.add');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::delete('/gallery/{id}', [GalleryController::class, 'deleteImage'])->name('image.delete');
-// routes/web.php
 
 Route::get('/activities/create', [ActivityController::class, 'create'])->name('activities.create');
 Route::post('/activities', [ActivityController::class, 'store'])->name('activities.store');
 Route::get('/activities/{title}', [ActivityController::class, 'show'])->name('activities.show');
 Route::delete('/activities/{id}', [ActivityController::class, 'destroy'])->name('activity.delete');
 
-// Store the form data
 Route::post('/volunteer/store', [VolunteerController::class, 'store'])->name('volunteer.store');
 Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy'])->name('volunteers.destroy');

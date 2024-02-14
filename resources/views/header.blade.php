@@ -72,6 +72,24 @@
             transform: scaleX(1);
             transform-origin: bottom left;
         }
+
+        /* Optional: Add custom CSS for styling */
+        #searchDiv {
+            display: none;
+            padding: 10px;
+            padding-top: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+
+        #search {
+            font-size: 14px !important;
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: none !important;
+
+        }
     </style>
 
     {{-- anime on scroll --}}
@@ -113,25 +131,17 @@
                     <i class="fab fa-facebook"></i>
                 </a>
 
-                {{-- <a href="https://www.instagram.com/YourInstagramUsername"
-                    class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
-                    style="width: 30px; height: 30px; border-radius: 50%;">
-                    <i class="fab fa-instagram"></i>
-                </a> --}}
-
                 <a href="https://t.me/+NnaNv2k7GW9hY2Zl"
                     class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                     style="width: 30px; height: 30px; border-radius: 50%;">
                     <i class="fab fa-telegram-plane"></i>
                 </a>
 
-                {{-- <div class="d-none d-sm-inline">hides telegram icon on sm screen --}}
                 <a href="https://wa.me/77600980"
                     class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                     style="width: 30px; height: 30px; border-radius: 50%;">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                {{-- </div> --}}
             </div>
 
         </div>
@@ -155,7 +165,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="/" class="text-decoration-none me-4">HOME
-                            {{-- <span class="ms-3 text-muted d-none d-md-inline">|</span> --}}
                         </a>
                     </li>
 
@@ -165,36 +174,46 @@
 
                     <li class="nav-item">
                         <a href="/centres" class="text-decoration-none me-4">CENTRES
-                            {{-- <span class="ms-3 text-muted d-none d-md-inline">|</span> --}}
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a href="/activities" class="text-decoration-none me-4">ACTIVITIES
-                            {{-- <span class="ms-3 text-muted d-none d-md-inline">|</span> --}}
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a href="/gallery" class="text-decoration-none me-4">GALLERY
-                            {{-- <span class="ms-3 text-muted d-none d-md-inline">|</span> --}}
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a href="/about-us" class="text-decoration-none me-4">ABOUT US
-                            {{-- <span class="ms-3 text-muted d-none d-md-inline">|</span> --}}
                         </a>
                     </li>
+
                 </ul>
+
                 {{-- hides the btn on l=md and lg screens but displays on collapse --}}
                 <button
                     onclick="window.location.href='/donate'"class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 mt-md-0 d-md-none"
                     style="border-radius:20px; font-size:12px;">
                     SUPPORT
                 </button>
-
             </div>
+
+            <!-- Button -->
+            <button id="toggleButton" class="btn btn-sm text-light px-5 py-2 mt-3 mt-md-0 d-none d-md-block"
+                style="border-radius: 20px; font-size: 12px;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="1" stroke="gray" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M21 21l-6 -6" />
+                </svg>
+            </button>
+
             {{-- hides the screen on sm screen, display on md and lg screens --}}
             <button onclick="window.location.href='/donate'"
                 class="btn btn-sm btn-warning text-light px-3 py-2 mt-3 mt-md-0 d-none d-md-block"
@@ -205,6 +224,49 @@
         </nav>
 
     </header>
+
+    <!-- Div to be displayed -->
+    <div id="searchDiv" class="my-3">
+
+        <form action="{{ url('/search') }}" method="GET" class="w-100 d-flex" style="justify-content: center;">
+            @csrf
+
+            <div class="input-group w-50">
+                <input id="search" type="text" name="search" placeholder="Search..."
+                    value="{{ old('search', request('search')) }}" class="form-control rounded-0 py-2">
+                <button type="submit" class="btn btn-sm border rounded-0">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="gray"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                    </svg>
+
+                </button>
+            </div>
+        </form>
+
+
+    </div>
+
+    <!-- JavaScript to toggle the div's display -->
+    <script>
+        // Get references to the button and the div
+        const toggleButton = document.getElementById('toggleButton');
+        const searchDiv = document.getElementById('searchDiv');
+
+        // Add event listener to the button
+        toggleButton.addEventListener('click', function() {
+            // Toggle the display property of the div
+            if (searchDiv.style.display === 'none') {
+                searchDiv.style.display = 'block';
+            } else {
+                searchDiv.style.display = 'none';
+            }
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>

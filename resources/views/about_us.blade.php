@@ -24,10 +24,6 @@
 
     @Include('header')
 
-    {{-- about us content --}}
-    {{-- <img src="{{ asset('images/monastry.jpg') }}" alt="logo" class="mx-5" data-aos="fade-right" data-aos-easing="ease"
-        data-aos-duration="1000"> --}}
-
     <h4 id="title" class="text-center my-3" data-aos="fade-right">
         BAYUEL KINZANG YOESEL CHOLING FOUNDATION
     </h4>
@@ -241,7 +237,8 @@
     </p>
 
     <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary mt-3" data-aos="fade-right">
-       <a href="/downloads/BAYUEL.pdf">Download</a> vision and objectives of <strong>Baeyuel Kuenzang Woesel Choeling Foundation (BKWC Foundation)</strong> (Dzongkha Version).
+        <a href="/downloads/BAYUEL.pdf">Download</a> vision and objectives of <strong>Baeyuel Kuenzang Woesel Choeling
+            Foundation (BKWC Foundation)</strong> (Dzongkha Version).
     </p>
 
     {{-- <h4 id="title" class="text-center my-3" data-aos="fade-right">

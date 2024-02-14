@@ -5,85 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voluntary Form</title>
-    <style>
-        body {
-            margin: 20px;
-        }
-
-        form,
-        h4 {
-            max-width: 50%;
-            margin: auto;
-        }
-
-        .alert {
-            margin: auto;
-            margin-bottom: 0;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input[type="text"],
-        input[type="date"],
-        input[type="email"],
-        select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-        input[type="radio"] {
-            margin-right: 5px;
-
-        }
-
-        input[type="checkbox"] {
-            margin-right: 5px;
-            margin-top: 10px;
-        }
-
-        textarea {
-            width: 100%;
-            height: 100px;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        input[type="text"]:invalid:focus,
-        input[type="date"]:invalid:focus,
-        input[type="email"]:invalid:focus,
-        select:invalid:focus,
-        textarea:invalid:focus {
-            border-color: transparent;
-            outline: 1px solid #e74c3c !important;
-        }
-
-        input[type="text"]:focus,
-        input[type="date"]:focus,
-        input[type="email"]:focus,
-        select:focus,
-        textarea:focus {
-            outline: none;
-        }
-    </style>
+    {{-- voluntary css --}}
+    <link rel="stylesheet" href="{{ asset('css/voluntary.css') }}">
 </head>
 
 <body>

@@ -6,83 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css'>
-    <style>
-        *,
-        *::before,
-        *::after {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            list-style: none;
-            list-style-type: none;
-            text-decoration: none;
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-        }
-
-        .cd__main {
-            display: block !important;
-        }
-
-        .container {
-            max-width: 80rem;
-            width: 100%;
-            margin: 0 auto;
-            /* padding: 4rem 2rem; */
-            /* padding-top: 2rem !important; */
-        }
-
-        .main .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 1rem;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .main .card {
-            color: #252a32;
-            border-radius: 2px;
-            background: #ffffff;
-            /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24); */
-        }
-
-        .main .card-image {
-            position: relative;
-            display: block;
-            width: 100%;
-            padding-top: 70%;
-            background: #ffffff;
-        }
-
-        .main .card-image img {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .main .container {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-gap: 1rem;
-            }
-        }
-    </style>
+    {{-- gallery css --}}
+    <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
 </head>
 
 <body>
 
     @Include('header')
 
-    <h5 style="font-weight: 100" class="text-center mb-4">Gallery</h5>
+    {{-- <h5 style="font-weight: 100" class="text-center mb-4">Gallery</h5> --}}
 
-    <div class="text-center text-secondary">
+    <div class="text-center text-secondary mt-3">
         @if (count($images) > 0)
             <main class="main">
                 <div class="container mb-5">

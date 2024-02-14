@@ -5,37 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity</title>
-    <style>
-        body {
-            color: #777;
-            font-family: sans-serif;
-            line-height: 1.15;
-        }
-
-        @media (max-width: 769px) {
-            .page {
-                padding: 0 !important;
-            }
-        }
-
-        .page {
-            padding: 2em 8rem;
-            /* background: #e2dddd; */
-            max-width: 100vw;
-        }
-
-        .archive {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            grid-gap: 2em;
-        }
-
-        .article {
-            padding: 1em 4em;
-            padding-top: 0;
-            background: #fff;
-        }
-    </style>
+    {{-- activity css --}}
+    <link rel="stylesheet" href="{{ asset('css/activity.css') }}">
 </head>
 
 <body>

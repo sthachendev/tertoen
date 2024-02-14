@@ -23,8 +23,6 @@
         }
     </style>
 
-    {{-- anime js --}}
-    {{-- <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script> --}}
 </head>
 
 <body>
@@ -40,27 +38,12 @@
                         CHOLING FOUNDATION
                     </span>
                     <div class="my-4 d-flex">
-                        <!-- Add your social media icons here -->
                         <a href="https://www.facebook.com/profile.php?id=100093656465335&mibextid=ZbWKwL"
                             class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                             style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
                             rel="noopener noreferrer">
                             <i class="fab fa-facebook"></i>
                         </a>
-
-                        {{-- <a href="https://www.instagram.com/YourInstagramUsername"
-                            class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
-                            style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-
-                        <a href="https://twitter.com/YourTwitterHandle"
-                            class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
-                            style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fab fa-twitter"></i>
-                        </a> --}}
 
                         <a href="https://t.me/+NnaNv2k7GW9hY2Zl"
                             class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"

@@ -5,125 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        @media (max-width: 767px) {
-            .custom-bg {
-                background-color: rgb(225, 239, 243);
-                margin-top: 1rem;
-                margin-left: 1rem;
-                margin-right: 1rem;
-            }
-
-            .nav-item a {
-                margin-top: 15px;
-            }
-
-            nav img {
-                max-width: 12% !important;
-            }
-
-        }
-
-        @media (max-width: 900px) {
-            .nav-item a {
-                margin-right: 0.5rem !important;
-            }
-        }
-
-        .nav-item a {
-            text-decoration: none;
-            color: #1d1c1c;
-            font-weight: 400;
-            font-size: 12px;
-            letter-spacing: 2px;
-            position: relative;
-            padding: 0.2rem;
-            display: inline-block;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .nav-item a:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background-color: #24408F;
-            bottom: -5px;
-            left: 0;
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .nav-item.active a {
-            color: #051b58;
-        }
-
-        .nav-item.active a:after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-
-        .nav-item a:hover {
-            color: #24408F !important;
-        }
-
-        .nav-item a:hover:after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-
-        /* Optional: Add custom CSS for styling */
-        #searchDiv {
-            display: none;
-            padding: 10px;
-            padding-top: 0;
-            transition: visibility 0s, opacity 0.5s linear;
-        }
-
-        #search {
-            font-size: 14px !important;
-        }
-
-        .form-control:focus {
-            outline: none;
-            box-shadow: none !important;
-
-        }
-
-        body {
-            --sb-track-color: #ffffff;
-            --sb-thumb-color: #5a5a5a;
-            --sb-size: 16px;
-        }
-
-        body::-webkit-scrollbar {
-            width: var(--sb-size)
-        }
-
-        body::-webkit-scrollbar-track {
-            background: var(--sb-track-color);
-            border-radius: 15px;
-        }
-
-        body::-webkit-scrollbar-thumb {
-            background: var(--sb-thumb-color);
-            border-radius: 15px;
-            border: 2px solid #ffffff;
-        }
-
-        @supports not selector(::-webkit-scrollbar) {
-            body {
-                scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-            }
-        }
-    </style>
 
     {{-- anime on scroll --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 
     {{-- loading --}}
     <link rel="stylesheet" href="{{ asset('css/loading.css') }}">
+
+    {{-- header css --}}
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+
 </head>
 
 <body>

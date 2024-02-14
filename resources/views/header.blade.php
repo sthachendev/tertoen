@@ -150,7 +150,7 @@
             @csrf
 
             <div class="input-group w-50">
-                <input id="search" type="text" name="search" placeholder="Search..."
+                <input id="search" name="search" placeholder="Search..."
                     value="{{ old('search', request('search')) }}" class="form-control rounded-0 py-2">
                 <button type="submit" class="btn btn-sm border rounded-0">
 

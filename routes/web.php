@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\VolunteerController;
+use App\Http\Controllers\DonationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -96,9 +97,10 @@ Route::get('/admin/search', [VolunteerController::class, 'search'])->name('admin
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 
-Route::post('/gallery-add', [GalleryController::class, 'add'])->name('img.add');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::post('/gallery-add', [GalleryController::class, 'add'])->name('img.add');
 Route::delete('/gallery/{id}', [GalleryController::class, 'deleteImage'])->name('image.delete');
 
 Route::get('/activities/create', [ActivityController::class, 'create'])->name('activities.create');
@@ -108,3 +110,5 @@ Route::delete('/activities/{id}', [ActivityController::class, 'destroy'])->name(
 
 Route::post('/volunteer/store', [VolunteerController::class, 'store'])->name('volunteer.store');
 Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy'])->name('volunteers.destroy');
+
+Route::post('/donations', [DonationController::class, 'store'])->name('donations.store');

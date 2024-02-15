@@ -26,7 +26,7 @@
                         {{ $activity->created_at->format('Y-m-d') }}
                     </p>
 
-                    <div style="text-align: center;" class="border">
+                    <div style="text-align: center;" class="">
                         <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}"
                             style="max-width: 100%; display: inline-block;">
                     </div>

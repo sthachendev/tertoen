@@ -119,7 +119,7 @@
                                         <td>{{ $donation->donation_type }}</td>
                                         <td>{{ $donation->paid_to_bank }}</td>
                                         <td>{{ $donation->journal_no }}</td>
-                                        <td>{{ $donation->amount }}</td>
+                                        <td>Nu. {{ $donation->amount }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

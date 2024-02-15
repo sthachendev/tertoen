@@ -45,7 +45,7 @@
     <br><br>
     <div class="mb-5 text-center d-flex flex-wrap justify-content-center" data-aos="fade-up" data-aos-duration="1000">
         <figure class="mx-3 mb-4">
-            <img src="{{ asset('images/dp.png') }}" alt="Secretary" height="120px" width="120px">
+            <img src="{{ asset('images/lamsonam.png') }}" alt="Secretary" height="120px" width="120px">
             <figcaption class="mt-3">
                 <strong>Secretary</strong>
                 <br>
@@ -55,7 +55,7 @@
         </figure>
 
         <figure class="mx-3 mb-4">
-            <img src="{{ asset('images/dp.png') }}" alt="Secretary" height="120px" width="120px">
+            <img src="{{ asset('images/khenpo.png') }}" alt="Secretary" height="120px" width="120px">
             <figcaption class="mt-3">
                 <strong>Treasurer</strong>
                 <br>
@@ -66,7 +66,7 @@
 
     <div class="mb-5 text-center d-flex flex-wrap justify-content-center" data-aos="fade-up" data-aos-duration="1000">
         <figure class="mx-5 mb-4">
-            <img src="{{ asset('images/dp.png') }}" alt="Secretary" height="120px" width="120px">
+            <img src="{{ asset('images/leki.png') }}" alt="Secretary" height="120px" width="120px">
             <figcaption class="mt-3">
                 <strong>Advisor to Board Members</strong>
                 <br>
@@ -76,7 +76,7 @@
         </figure>
 
         <figure class="mx-5 mb-4">
-            <img src="{{ asset('images/dp.png') }}" alt="Secretary" height="120px" width="120px">
+            <img src="{{ asset('images/sangay.png') }}" alt="Secretary" height="120px" width="120px">
             <figcaption class="mt-3">
                 <strong>Executive Director</strong>
                 <br>
@@ -86,7 +86,7 @@
         </figure>
 
         <figure class="mx-5 mb-4">
-            <img src="{{ asset('images/dp.png') }}" alt="Secretary" height="120px" width="120px">
+            <img src="{{ asset('images/yeshi.png') }}" alt="Secretary" height="120px" width="120px">
             <figcaption class="mt-3">
                 <strong>Advisor to Board Members</strong>
                 <br>
@@ -97,7 +97,7 @@
 
     <div class="mb-5 text-center d-flex flex-wrap justify-content-center" data-aos="fade-up" data-aos-duration="1000">
         <figure class="mx-3 mb-4">
-            <img src="{{ asset('images/dp.png') }}" alt="Secretary" height="120px" width="120px">
+            <img src="{{ asset('images/mssonam.png') }}" alt="Secretary" height="120px" width="120px">
             <figcaption class="mt-3">
                 <strong>Administrative Head</strong>
                 <br>
@@ -110,7 +110,7 @@
         </figure>
 
         <figure class="mx-3 mb-4">
-            <img src="{{ asset('images/dp.png') }}" alt="Secretary" height="120px" width="120px">
+            <img src="{{ asset('images/tshul.png') }}" alt="Secretary" height="120px" width="120px">
             <figcaption class="mt-3">
                 <strong>Finance Head</strong>
                 <br>

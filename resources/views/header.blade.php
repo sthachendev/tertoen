@@ -82,31 +82,31 @@
             <div class="navbar-collapse collapse justify-content-center custom-bg p-2" id="navbar">
                 <ul class="navbar-nav ps-4">
                     <li class="nav-item">
-                        <a href="/" class="text-decoration-none me-4">HOME
+                        <a href="/" class="text-decoration-none me-2 ms-2">HOME
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/lineage" class="text-decoration-none me-4">LINEAGE</a>
+                        <a href="/lineage" class="text-decoration-none me-2 ms-2">LINEAGE</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/activities" class="text-decoration-none me-4">ACTIVITIES
+                        <a href="/activities" class="text-decoration-none me-2 ms-2">ACTIVITIES
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/gallery" class="text-decoration-none me-4">GALLERY
+                        <a href="/gallery" class="text-decoration-none me-2 ms-2">GALLERY
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/oraganogram" class="text-decoration-none me-4">ORAGANOGRAM
+                        <a href="/oraganogram" class="text-decoration-none me-2 ms-2">ORAGANOGRAM
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/about-us" class="text-decoration-none me-4">ABOUT US
+                        <a href="/about-us" class="text-decoration-none me-2 ms-2">ABOUT US
                         </a>
                     </li>
 
@@ -114,7 +114,7 @@
 
                 {{-- hides the btn on l=md and lg screens but displays on collapse --}}
                 <button
-                    onclick="window.location.href='/donation'"class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 ms-4 mt-md-0 d-md-none"
+                    onclick="window.location.href='/donation'"class="btn btn-sm btn-warning text-light px-3 py-2  my-4 ms-4 mt-md-0 d-md-none"
                     style="border-radius:20px; font-size:12px;">
                     SUPPORT
                 </button>

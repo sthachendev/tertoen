@@ -54,9 +54,6 @@
             </figcaption>
         </figure>
 
-        <figure class="mx-5 mb-4">
-        </figure>
-
         <figure class="mx-3 mb-4">
             <img src="{{ asset('images/dp.png') }}" alt="Secretary" height="120px" width="120px">
             <figcaption class="mt-3">

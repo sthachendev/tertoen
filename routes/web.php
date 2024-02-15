@@ -51,21 +51,25 @@ Route::get('/activities', function () {
     return view('activities', compact('activities'));
 });
 
-Route::get('/donate', function () {
-    return view('donate');
+Route::get('/donation', function () {
+    return view('donation');
 });
 
-Route::get('/onetimedonate', function () {
-    return view('one_time_donate');
-});
+// Route::get('/donate', function () {
+//     return view('donate');
+// });
 
-Route::get('/yearlydonate', function () {
-    return view('yearly_donate');
-});
+// Route::get('/onetimedonate', function () {
+//     return view('one_time_donate');
+// });
 
-Route::get('/monthlydonate', function () {
-    return view('monthly_donate');
-});
+// Route::get('/yearlydonate', function () {
+//     return view('yearly_donate');
+// });
+
+// Route::get('/monthlydonate', function () {
+//     return view('monthly_donate');
+// });
 
 Route::get('/volunteer', function () {
     return view('volunteer');

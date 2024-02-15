@@ -63,9 +63,9 @@
                         <a href="/volunteer" class="text-light text-decoration-none">BKWC Foundation Voluntary Services
                             Form</a>
                     </div>
-                    <div class="my-4 d-flex">
+                    {{-- <div class="my-4 d-flex">
                         <a href="/admin/login" class="text-light text-decoration-none">Admin login</a>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <!-- Right side with quick links -->
@@ -74,10 +74,10 @@
 
                         <div class="d-flex flex-column p-3 text-start">
                             <h6 class="text-light mb-4 border-0 border-secondary">Get Involved</h6>
-                            <a href="/centres" class="text-light text-decoration-none mb-2"
-                                style="font-size:12px">Centres</a>
-                            <a href="/activities" class="text-light text-decoration-none mb-2 mt-2"
+                            <a href="/activities" class="text-light text-decoration-none mb-2"
                                 style="font-size:12px">Activities</a>
+                            <a href="/oraganogram" class="text-light text-decoration-none mb-2 mt-2"
+                                style="font-size:12px">Oraganogram</a>
                             <a href="/about-us" class="text-light text-decoration-none mb-2 mt-2"
                                 style="font-size:12px">About us</a>
                             <a href="/donate" class="text-light text-decoration-none mb-2 mt-2"

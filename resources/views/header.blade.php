@@ -80,7 +80,7 @@
             </button>
 
             <div class="navbar-collapse collapse justify-content-center custom-bg p-2" id="navbar">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ps-4">
                     <li class="nav-item">
                         <a href="/" class="text-decoration-none me-4">HOME
                         </a>
@@ -114,14 +114,14 @@
 
                 {{-- hides the btn on l=md and lg screens but displays on collapse --}}
                 <button
-                    onclick="window.location.href='/donate'"class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 mt-md-0 d-md-none"
+                    onclick="window.location.href='/donation'"class="btn btn-sm btn-warning text-light px-3 py-2  mt-3 ms-4 mt-md-0 d-md-none"
                     style="border-radius:20px; font-size:12px;">
                     SUPPORT
                 </button>
             </div>
 
             <!-- Button -->
-            <button id="toggleButton" class="btn btn-sm text-light px-5 py-2 mt-3 mt-md-0 d-none d-md-block"
+            <button id="toggleButton" class="btn btn-sm text-light p-2 pe-4 mt-3 mt-md-0 d-none d-md-block"
                 style="border-radius: 20px; font-size: 12px;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24"
                     height="24" viewBox="0 0 24 24" stroke-width="1" stroke="gray" fill="none"
@@ -133,7 +133,7 @@
             </button>
 
             {{-- hides the screen on sm screen, display on md and lg screens --}}
-            <button onclick="window.location.href='/donate'"
+            <button onclick="window.location.href='/donation'"
                 class="btn btn-sm btn-warning text-light px-3 py-2 mt-3 mt-md-0 d-none d-md-block"
                 style="border-radius:20px; font-size:12px;">
                 SUPPORT
@@ -165,7 +165,6 @@
                 </button>
             </div>
         </form>
-
 
     </div>
 

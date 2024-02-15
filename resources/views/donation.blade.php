@@ -237,24 +237,24 @@
                         <select class="form-select mb-4 shadow-none" aria-label="Donation Type" name="donation_type"
                             required>
                             <option selected disabled>Donation Type</option>
-                            <option value="one-time">One Time</option>
-                            <option value="monthly">Monthly</option>
-                            <option value="yearly">Yearly</option>
+                            <option value="One-time">One Time</option>
+                            <option value="Monthly">Monthly</option>
+                            <option value="Yearly">Yearly</option>
                         </select>
                         <div class="input-group mb-4">
                             <select class="form-select shadow-none" aria-label="Payment platform (mbob, mpay)"
                                 name="payment_platform" required>
                                 <option selected disabled>Payment platform</option>
-                                <option value="mbob">mBOB</option>
-                                <option value="mpay">mPay</option>
+                                <option value="MBOB">mBOB</option>
+                                <option value="MPAY">mPay</option>
                             </select>
                         </div>
                         <div class="input-group mb-4">
                             <select class="form-select shadow-none" aria-label="Paid to bank" name="paid_to_bank"
                                 required>
                                 <option selected disabled>Paid to bank</option>
-                                <option value="bob">BOB - 20234029</option>
-                                <option value="bnb">BNBL - 5100161378001</option>
+                                <option value="BOB">BOB - 20234029</option>
+                                <option value="BNB">BNBL - 5100161378001</option>
                             </select>
                         </div>
                         <div class="input-group mb-4">
@@ -266,7 +266,7 @@
                                 pattern="[0-9]+" maxlength="20">
                         </div>
                         <div class="input-group mb-4">
-                            <textarea rows="4" type="text" class="form-control" name="remarks" placeholder="Remarks" maxlength="200"></textarea>
+                            <textarea rows="4" type="text" class="form-control" name="remarks" placeholder="Remarks" maxlength="30"></textarea>
                         </div>
                         <div class="form-check mb-4">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"

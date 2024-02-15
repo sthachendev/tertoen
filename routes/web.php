@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SearchController;
 use App\Models\Activity;
+use App\Models\Donation;
 use App\Models\Gallery;
 use App\Models\Volunteer;
 use Illuminate\Support\Facades\Route;
@@ -93,7 +94,12 @@ Route::get('/admin/volunteer', function () {
     return view('admin.volunteer', compact('volunteers'));
 });
 
-Route::get('/admin/search', [VolunteerController::class, 'search'])->name('admin.search');
+Route::get('/admin/donation', function () {
+    // lastest data first
+    $donations = Donation::orderBy('created_at', 'desc')->paginate(6);
+
+    return view('admin.donation', compact('donations'));
+});
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 
@@ -110,5 +116,12 @@ Route::delete('/activities/{id}', [ActivityController::class, 'destroy'])->name(
 
 Route::post('/volunteer/store', [VolunteerController::class, 'store'])->name('volunteer.store');
 Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy'])->name('volunteers.destroy');
+Route::get('/admin/search', [VolunteerController::class, 'search'])->name('admin.search');
 
 Route::post('/donations', [DonationController::class, 'store'])->name('donations.store');
+Route::delete('/donations/{id}', [DonationController::class, 'delete'])->name('donations.delete');
+Route::get('/admin/donation/search', [DonationController::class, 'search'])->name('donation.search');
+
+Route::get('/admin/donation/search/onetime', [DonationController::class, 'searchonetime'])->name('donation.search1');
+Route::get('/admin/donation/search/monthly', [DonationController::class, 'searchmonthly'])->name('donation.search2');
+Route::get('/admin/donation/search/yearly', [DonationController::class, 'searchyearly'])->name('donation.search3');

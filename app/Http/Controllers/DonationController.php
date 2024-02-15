@@ -54,4 +54,88 @@ class DonationController extends Controller
         // return response()->json(['success' => 'Donation stored successfully!']);
 
     }
+
+    public function delete($id)
+    {
+        // Find the donation by its ID
+        $donation = Donation::find($id);
+
+        // If the donation doesn't exist, return an error response
+        if (!$donation) {
+            return redirect()->back()->with('error', 'Sorry, the donation you are trying to delete does not exist.');
+        }
+
+        // Delete the donation
+        $donation->delete();
+
+        // Redirect or return a response as needed
+        return redirect()->back()->with('success', 'Donation data deleted.');
+        // You can also return a JSON response if needed
+        // return response()->json(['success' => 'Donation deleted successfully!']);
+    }
+
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+
+        $donations = Donation::where(function ($query) use ($search) {
+            $query->where('name', 'like', "%$search%")
+                ->orWhere('cid', 'like', "%$search%")
+                ->orWhere('journal_no', 'like', "%$search%")
+                ->orWhere('phone', 'like', "%$search%");
+        })
+            ->paginate(8); // adjust the number per page as needed
+
+        return view('admin.donation', ['donations' => $donations]);
+    }
+
+    public function searchonetime(Request $request)
+    {
+        $search = $request->input('search');
+    
+        $donations = Donation::where('donation_type', 'one-time')
+            ->where(function ($query) use ($search) {
+                $query->where('name', 'like', "%$search%")
+                    ->orWhere('cid', 'like', "%$search%")
+                    ->orWhere('journal_no', 'like', "%$search%")
+                    ->orWhere('phone', 'like', "%$search%");
+            })
+            ->paginate(8);
+    
+        return view('admin.donation', ['donations' => $donations]);
+    }
+
+    public function searchmonthly(Request $request)
+    {
+        $search = $request->input('search');
+    
+        $donations = Donation::where('donation_type', 'monthly')
+            ->where(function ($query) use ($search) {
+                $query->where('name', 'like', "%$search%")
+                    ->orWhere('cid', 'like', "%$search%")
+                    ->orWhere('journal_no', 'like', "%$search%")
+                    ->orWhere('phone', 'like', "%$search%");
+            })
+            ->paginate(8);
+    
+        return view('admin.donation', ['donations' => $donations]);
+    }
+
+    public function searchyearly(Request $request)
+    {
+        $search = $request->input('search');
+    
+        $donations = Donation::where('donation_type', 'yearly')
+            ->where(function ($query) use ($search) {
+                $query->where('name', 'like', "%$search%")
+                    ->orWhere('cid', 'like', "%$search%")
+                    ->orWhere('journal_no', 'like', "%$search%")
+                    ->orWhere('phone', 'like', "%$search%");
+            })
+            ->paginate(8);
+    
+        return view('admin.donation', ['donations' => $donations]);
+    }
+    
 }

@@ -86,7 +86,6 @@
                                         data-mailingAddress="{{ $volunteer->mailingAddress }}"
                                         data-id="{{ $volunteer->id }}"
                                         data-areasOfInterest="{{ $volunteer->areasOfInterest }}">
-                                        <td>{{ $volunteer->id }}</td>
                                         <td>{{ $volunteer->fullName }}</td>
                                         <td>{{ $volunteer->gender }}</td>
                                         <td>{{ $volunteer->cid }}</td>

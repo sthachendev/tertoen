@@ -24,7 +24,7 @@ class GalleryController extends Controller
                 ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->encode('jpg', 75); // Specify the desired image format and quality
+                ->encode('jpg', 100); // Specify the desired image format and quality
 
             // Convert the compressed image to binary data
             $binaryImageData = $compressedImage->getEncoded();

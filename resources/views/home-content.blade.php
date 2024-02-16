@@ -89,7 +89,7 @@
             <main class="p-3 px-5" data-aos="fade-up" data-aos-duration="1000">
                 <p style="font-size:14px; line-height: 29px;" class="text-secondary">
                     The reincarnation of Terton Drukdra Dorji Rinpoche, known as His Eminence Ugyen Droduel Thinley
-                    Kunchap Rinpoche has established the Pel Drukdraiing Foundation with the support from his numerous
+                    Kunchap Rinpoche has established the Bayuel Kinzang Yoesel Choling Foundation with the support from his numerous
                     followers, donors, and patrons. The Foundation name, Drukdra, is after the country of Bhutan known
                     as Druk and Terton Drukdra Dorji. The activities of the Pel
                     Drukdraling Foundation are guided by compassion and wisdom. The Foundation seeks to promote and

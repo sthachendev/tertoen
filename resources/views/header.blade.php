@@ -46,7 +46,7 @@
     background-image: url('{{ asset('images/flower.png') }}'), url('{{ asset('images/flower2.png') }}');
     background-position: left top, right top;
     background-repeat: no-repeat, no-repeat;
-    background-size: auto 58%, auto 55%;
+    background-size: auto 120%, auto 110%;
     ">
         <div class="pt-4 pb-3">
             <p class="fw-bold fs-4 text-light text-center" style="letter-spacing: 0.1rem">

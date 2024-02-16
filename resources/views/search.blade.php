@@ -33,8 +33,8 @@
                         @if ($activity->photo)
                             <div style="text-align: center;">
                                 <a href="/activities/{{ rawurlencode($activity->title) }}">
-                                    <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}"
-                                        style="max-width: 100%; display: inline-block;">
+                                    <img src="data:image/jpeg;base64,{{ base64_encode($activity->photo) }}"
+                                        alt="{{ $activity->title }}" style="max-width: 100%; display: inline-block;">
                                 </a>
                             </div>
                         @endif
@@ -75,9 +75,10 @@
                     @foreach ($images as $image)
                         <div class="card">
                             <div class="card-image">
-                                <a href="{{ asset($image->image) }}" data-fancybox="gallery"
-                                    data-caption="{{ $image->name }}">
-                                    <img src="{{ asset($image->image) }}" alt="{{ $image->name }}">
+                                <a href="data:image/jpeg;base64,{{ base64_encode($image->image) }}"
+                                    data-fancybox="gallery" data-caption="{{ $image->name }}">
+                                    <img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}"
+                                        alt="{{ $image->name }}">
                                 </a>
                             </div>
                         </div>

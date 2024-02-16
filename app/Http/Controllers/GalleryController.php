@@ -24,7 +24,7 @@ class GalleryController extends Controller
                 ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->encode('jpg', 99); // Specify the desired image format and quality
+                ->encode('jpg', 80); // Specify the desired image format and quality
 
             // Convert the compressed image to binary data
             $binaryImageData = $compressedImage->getEncoded();
@@ -38,6 +38,32 @@ class GalleryController extends Controller
 
         return back()->with('success', 'Image added to gallery.');
     }
+
+    // public function add(Request $request)
+    // {
+    //     $image = new Gallery();
+    //     $image->name = $request->input('name');
+    
+    //     // Handle image upload if needed
+    //     if ($request->hasFile('image')) {
+    //         // Get the uploaded image
+    //         $uploadedImage = $request->file('image');
+    
+    //         // Load the image without resizing
+    //         $loadedImage = Image::make($uploadedImage);
+    
+    //         // Convert the loaded image to binary data
+    //         $binaryImageData = $loadedImage->encode('jpg', 99)->getEncoded();
+    
+    //         // Set the binary image data in the database
+    //         $image->image = $binaryImageData;
+    //     }
+    
+    //     // Save the image
+    //     $image->save();
+    
+    //     return back()->with('success', 'Image added to gallery.');
+    // }
 
     public function deleteImage($id)
     {

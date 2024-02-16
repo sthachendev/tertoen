@@ -54,7 +54,7 @@ class ActivityController extends Controller
                 ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->encode('jpg', 99); // Specify the desired image format and quality
+                ->encode('jpg', 80); // Specify the desired image format and quality
 
             // Convert compressed image to binary data
             $binaryImageData = $compressedImage->getEncoded();
@@ -72,6 +72,38 @@ class ActivityController extends Controller
         $activity->save();
         return back()->with('success', 'Activity Posted.');
     }
+
+    // public function store(Request $request)
+    // {
+    //     try {
+    //         $activity = new Activity();
+    //         $activity->title = $request->input('title');
+    //         $activity->description = $request->input('description');
+
+    //         // Handle image upload if needed
+    //         if ($request->hasFile('photo')) {
+    //             // Get the uploaded photo
+    //             $uploadedPhoto = $request->file('photo');
+
+    //             // Load the image without resizing
+    //             $loadedImage = Image::make($uploadedPhoto);
+
+    //             // Convert the loaded image to binary data
+    //             $binaryImageData = $loadedImage->encode('jpg', 99)->getEncoded();
+
+    //             // Store the binary data in the database
+    //             $activity->photo = $binaryImageData;
+    //         }
+
+    //         // Save the activity
+    //         $activity->save();
+
+    //         return back()->with('success', 'Activity Posted.');
+    //     } catch (Exception $e) {
+    //         // Handle the error
+    //         return back()->with('error', 'An error occurred: ' . $e->getMessage());
+    //     }
+    // }
 
     public function destroy($id)
     {

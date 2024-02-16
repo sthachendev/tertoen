@@ -24,7 +24,8 @@ use App\Http\Controllers\DonationController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $activities = Activity::orderBy('created_at', 'desc')->take(4)->get();
+    return view('home', compact('activities'));
 });
 
 Route::get('/admin/login', function () {

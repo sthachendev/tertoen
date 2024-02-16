@@ -15,7 +15,10 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            /* font-family: 'Roboto', sans-serif; */
             font-family: 'Poppins', sans-serif;
+            /* font-family: 'Lato', sans-serif; */
+
         }
 
         main {
@@ -33,36 +36,36 @@
                 <!-- Left side with text logo and social media icons -->
                 <div class="col-md-6 text-md-start mb-3 mb-md-0" id="text-logo">
                     <span class="fw-bold fs-4 text-light">
-                        BAYUEL KINZANG YOESEL
+                        BAYUEL KINZANG YOESEL CHOLING
                         <br>
-                        CHOLING FOUNDATION
+                        FOUNDATION
                     </span>
-                    <div class="my-4 d-flex">
+                    <div class="mt-4 d-flex">
                         <a href="https://www.facebook.com/profile.php?id=100093656465335&mibextid=ZbWKwL"
-                            class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
+                            class="text-light me-4 d-flex align-items-center justify-content-center text-decoration-none"
                             style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
                             rel="noopener noreferrer">
                             <i class="fab fa-facebook"></i>
                         </a>
 
                         <a href="https://t.me/+NnaNv2k7GW9hY2Zl"
-                            class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
+                            class="text-light me-4 d-flex align-items-center justify-content-center text-decoration-none"
                             style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
                             rel="noopener noreferrer">
                             <i class="fab fa-telegram-plane"></i>
                         </a>
 
                         <a href="https://wa.me/77600980"
-                            class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
+                            class="text-light me-4 d-flex align-items-center justify-content-center text-decoration-none"
                             style="background: #4F5B9E; width: 30px; height: 30px; border-radius: 50%;" target="_blank"
                             rel="noopener noreferrer">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
-                    <div class="my-4 d-flex">
+                    {{-- <div class="my-4 d-flex">
                         <a href="/volunteer" class="text-light text-decoration-none">BKWC Foundation Voluntary Services
                             Form</a>
-                    </div>
+                    </div> --}}
                     {{-- <div class="my-4 d-flex">
                         <a href="/admin/login" class="text-light text-decoration-none">Admin login</a>
                     </div> --}}
@@ -72,28 +75,12 @@
                 <div class="col-md-6 text-md-end" style="background:rgba(79, 91, 158, 0.5);">
                     <div class="d-flex justify-content-around p-3">
 
-                        <div class="d-flex flex-column p-3 text-start">
-                            <h6 class="text-light mb-4 border-0 border-secondary">Get Involved</h6>
-                            <a href="/activities" class="text-light text-decoration-none mb-2"
-                                style="font-size:12px">Activities</a>
-                            <a href="/oraganogram" class="text-light text-decoration-none mb-2 mt-2"
-                                style="font-size:12px">Oraganogram</a>
-                            <a href="/about-us" class="text-light text-decoration-none mb-2 mt-2"
-                                style="font-size:12px">About us</a>
-                            <a href="/donate" class="text-light text-decoration-none mb-2 mt-2"
-                                style="font-size:12px">Support us</a>
-                        </div>
-
-                        <div class="d-flex flex-column p-3 text-start">
-                            <h6 class="text-light mb-4 border-0 border-secondary">Contact Us</h6>
-                            <span class="text-light text-decoration-none mb-2" style="font-size:12px">Flat No.32,
-                                Building No.5,</span>
-                            <span class="text-light text-decoration-none mb-2" style="font-size:12px">Changzamtog, Thim
-                                Throm,</span>
-                            <span class="text-light text-decoration-none" style="font-size:12px">Thimphu 11001,
+                        <div class="d-flex flex-column p-2 text-start">
+                            <h6 class="text-light mb-3 border-0 border-secondary">Contact Us</h6>
+                            <span class="text-light text-decoration-none mb-3" style="font-size:12px">Flat No.32,
+                                Building No.5, Changzamtog, Thim Throm, Thimphu 11001,
                                 Bhutan</span>
-                            <br>
-                            <span class="text-light mb-2" style="font-size:12px">
+                            <span class="text-light mb-3" style="font-size:12px">
                                 Email:
                                 <a href="mailto:drukbkwcfoundation@gmail.com"
                                     class="text-light text-decoration-none">drukbkwcfoundation@gmail.com</a>

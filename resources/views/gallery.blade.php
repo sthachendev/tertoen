@@ -16,7 +16,7 @@
 
     {{-- <h5 style="font-weight: 100" class="text-center mb-4">Gallery</h5> --}}
 
-    <div class="text-center text-secondary mt-3">
+    <div class="text-center text-secondary mt-5">
         @if (count($images) > 0)
             <main class="main">
                 <div class="container mb-5">

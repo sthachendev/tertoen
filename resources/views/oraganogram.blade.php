@@ -18,17 +18,19 @@
 
     @Include('header')
 
-    <h4 id="title" class="text-center my-4" data-aos="fade-right">
+    <h4 id="title" class="text-center my-5" data-aos="fade-up" data-aos-duration="1000">
         BAYUEL KINZANG WOESEL CHOELING FOUNDATION
     </h4>
 
-    <p class="text-secondary mb-5" data-aos="fade-right" style="margin:0 10% 0 10%; line-height: 29px;">
+    <p class="text-secondary mb-5" data-aos="fade-up" data-aos-duration="1000"
+        style="margin:0 10% 0 10%; line-height: 29px;">
         Our Team
         The Board of directors is the governing body of the Foundation and provides overall guidance and directives to
         the Committees, the Secretariat and various other units and divisions of the Foundation
     </p>
     {{-- 
-    <h4 id="title" class="text-center my-3" data-aos="fade-right">
+    <h4 id="title" class="text-center my-3" data-aos="fade-up"
+        data-aos-duration="1000">
         BOARD OF DIRECTORS
     </h4> --}}
 

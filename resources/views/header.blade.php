@@ -24,13 +24,20 @@
         <img src="{{ asset('images/wheel1.png') }}" alt="Loading..." class="spinner">
     </div>
 
-    <header style="background: #24408F url('{{ asset('images/cloud.png') }}');">
+    <header
+        style="
+    background-color: #24408F;
+    background-image: url('{{ asset('images/flower.png') }}'), url('{{ asset('images/flower2.png') }}');
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 58%, auto 55%;
+    ">
 
-        <div class="d-flex justify-content-between ms-5 ">
+        <div class="pt-4 pb-3">
             <!-- header above the navs -->
-            <div class="d-flex justify-content-space-around align-items-center py-2">
+            {{-- <div class="d-flex justify-content-space-around align-items-center py-2"> --}}
 
-                <div class="me-4 text-light d-none d-sm-inline" style="font-size:12px;">
+            {{-- <div class="me-4 text-light d-none d-sm-inline" style="font-size:12px;">
                     <i class="fa-solid fa-phone me-1"></i>+975-77600980
                 </div>
 
@@ -38,11 +45,18 @@
                     <i class="fa-solid fa-envelope me-1"></i>
                     <a href="mailto:drukbkwcfoundation@gmail.com" class="text-light"
                         style="text-decoration: none;">drukbkwcfoundation@gmail.com</a>
-                </div>
+                </div> --}}
+            <p class="fw-bold fs-4 text-light text-center" style="letter-spacing: 0.1rem">
+                BAYUEL KINZANG YOESEL CHOLING FOUNDATION
+                <br>
+                <span class="fw-normal fs-6">
+                    Fostering Happiness and Well-being
+                </span>
+            </p>
 
-            </div>
+            {{-- </div> --}}
             <!-- social media links -->
-            <div style="background: rgba(79, 91, 158, 0.5);" class="d-flex ps-3 py-2 me-5">
+            {{-- <div style="background: rgba(79, 91, 158, 0.5);" class="d-flex ps-3 py-2 me-5">
                 <a href="https://www.facebook.com/profile.php?id=100093656465335&mibextid=ZbWKwL"
                     class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
                     style="width: 30px; height: 30px; border-radius: 50%;">
@@ -60,16 +74,16 @@
                     style="width: 30px; height: 30px; border-radius: 50%;">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-            </div>
+            </div> --}}
 
         </div>
 
         {{-- nav bar --}}
-        <nav class="navbar navbar-expand-md py-4"
-            style="
+        <nav class="navbar navbar-expand-md py-4 border-bottom" style="background: #fffF; padding: 0 10% 0 10%;"
+            {{-- style="
         background: #fff url('{{ asset('images/wheel.png') }}') right/cover no-repeat;
          background-size: auto 80%;
-          padding: 0 10% 0 10%;">
+          padding: 0 10% 0 10%;" --}}>
 
             <img id="logo" src="{{ asset('images/logo.png') }}" alt="logo"
                 style="max-width: 7%; cursor: pointer;">
@@ -121,7 +135,7 @@
             </div>
 
             <!-- Button -->
-            <button id="toggleButton" class="btn btn-sm text-light p-2 pe-4 mt-3 mt-md-0 d-none d-md-block"
+            <button id="toggleButton" class="btn btn-sm text-light p-2 pe-5 mt-3 mt-md-0 d-none d-md-block"
                 style="border-radius: 20px; font-size: 12px;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24"
                     height="24" viewBox="0 0 24 24" stroke-width="1" stroke="gray" fill="none"
@@ -154,9 +168,9 @@
                     value="{{ old('search', request('search')) }}" class="form-control rounded-0 py-2">
                 <button type="submit" class="btn btn-sm border rounded-0">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search"
-                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="gray"
-                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1" stroke="gray" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                         <path d="M21 21l-6 -6" />

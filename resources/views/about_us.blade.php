@@ -24,7 +24,7 @@
 
     @Include('header')
 
-    <h4 id="title" class="text-center my-3" data-aos="fade-right">
+    <h4 id="title" class="text-center mb-3 mt-5" data-aos="fade-right">
         BAYUEL KINZANG YOESEL CHOLING FOUNDATION
     </h4>
     <br>

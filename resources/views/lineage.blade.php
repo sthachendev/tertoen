@@ -17,7 +17,8 @@
             main {
                 margin: 0 !important;
             }
-            h4{
+
+            h4 {
                 font-size: 16px !important;
             }
         }
@@ -29,16 +30,16 @@
     @Include('header')
 
     {{-- Linage content --}}
-    <img src="{{ asset('images/rinpoche-image-1.png') }}" alt="logo" class="mx-5" data-aos="fade-right"
-        data-aos-easing="ease" data-aos-duration="1000">
+    <img src="{{ asset('images/rinpoche-image-1.png') }}" alt="logo" class="mx-5 mt-5" data-aos="fade-up"
+        data-aos-duration="1000">
 
-    <h4 id="title" class="text-center mt-3" data-aos="fade-right">
+    <h4 id="title" class="text-center mt-4" data-aos="fade-up" data-aos-duration="1000">
         H.H Ugyen Droduel Thinley Kunchap Rinpoche
     </h4>
 
     <main class="px-5 py-3" style="margin: 0 20%;">
-        <h4 style="font-weight: 100" data-aos="fade-right">LINEAGE</h4>
-        <p data-aos="fade-right">
+        <h4 style="font-weight: 100" data-aos="fade-up" data-aos-duration="1000">LINEAGE</h4>
+        <p data-aos="fade-up" data-aos-duration="1000">
             From the time of the prevailing of the Buddha Dharma to the existing moment in time, there
             are number of unbroken succession of great Buddhas and Bodhisattvas have been attained
             enlightenment, and tirelessly devoted themselves full-time to their beneficial activities
@@ -74,9 +75,9 @@
 
         <br>
         <br>
-        <h4 style="font-weight: 100" data-aos="fade-right">H.H. Lhalung Pelgyi Dorji</h4>
+        <h4 style="font-weight: 100" data-aos="fade-up" data-aos-duration="1000">H.H. Lhalung Pelgyi Dorji</h4>
         <br>
-        <div style="overflow: hidden;" data-aos="fade-right">
+        <div style="overflow: hidden;" data-aos="fade-up" data-aos-duration="1000">
             <img src="{{ asset('images/lhalung pelgi dorji.jpg') }}" style="float: left; margin-right: 10px; width:30%"
                 class="me-5">
             <p>
@@ -90,9 +91,9 @@
 
         <br>
         <br>
-        <h4 style="font-weight: 100" data-aos="fade-right">H.H. Terton Drukdra Dorji</h4>
+        <h4 style="font-weight: 100" data-aos="fade-up" data-aos-duration="1000">H.H. Terton Drukdra Dorji</h4>
         <br>
-        <div style="overflow: hidden;" data-aos="fade-right">
+        <div style="overflow: hidden;" data-aos="fade-up" data-aos-duration="1000">
             <img src="{{ asset('images/Terton Drukdra Dorji.jpg') }}" style="float: left; margin-right: 10px; width:30%"
                 class="me-5">
             <p>
@@ -107,9 +108,9 @@
 
         <br>
         <br>
-        <h4 style="font-weight: 100" data-aos="fade-right">H.H. Gesheyla Rinpoche</h4>
+        <h4 style="font-weight: 100" data-aos="fade-up" data-aos-duration="1000">H.H. Gesheyla Rinpoche</h4>
         <br>
-        <div style="overflow: hidden;" data-aos="fade-right">
+        <div style="overflow: hidden;" data-aos="fade-up" data-aos-duration="1000">
             <img src="{{ asset('images/Gesheyla Rinpoche.jpg') }}" style="float: left; margin-right: 10px; width:30%"
                 class="me-5">
             <p>
@@ -122,10 +123,11 @@
 
         <br>
         <br>
-        <h4 style="font-weight: 100" data-aos="fade-right">His Holiness Trulku Ugyen Drodrul Thinley Kunchap Rinpoche
+        <h4 style="font-weight: 100" data-aos="fade-up" data-aos-duration="1000">His Holiness Trulku Ugyen Drodrul
+            Thinley Kunchap Rinpoche
         </h4>
         <br>
-        <div style="overflow: hidden;" data-aos="fade-right">
+        <div style="overflow: hidden;" data-aos="fade-up" data-aos-duration="1000">
             <img src="{{ asset('images/trulku.jpg') }}" style="float: left; margin-right: 10px;" class="me-5 w-50">
             <p>
                 He is the unmistaken reincarnation of Terton Drukdra Dorji, was born in 1999 in the paradise of the
@@ -138,7 +140,7 @@
             </p>
         </div>
 
-        <p data-aos="fade-right">
+        <p data-aos="fade-up" data-aos-duration="1000">
             At the age of three, Trulku was saying again and again that he wanted to go to Chumphu Lhakhang (temple)
             that is located in Paro. On the way to visiting the temple, Trulku remembered a cave and went to see it.
             While in the cave, he revealed a treasure that had been placed there previously. While at Chumphu Lhakhang
@@ -150,7 +152,7 @@
             Dorji. As well, at the age of three, he remembered vividly many incidents from his previous life.
         </p>
 
-        <p data-aos="fade-right">
+        <p data-aos="fade-up" data-aos-duration="1000">
             At present, Trulku is pursuing Buddhist higher education at Sangchen Chokhor Buddhist College, in Paro,
             Bhutan. Trulku came to Sangchen Chokhor Buddhist College at the age of four and has been residing here since
             where he lives with his teacher and attendants. Presently, H.H. Truelku Ugyen Droduel ThinleyKunchap

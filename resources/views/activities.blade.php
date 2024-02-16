@@ -13,7 +13,7 @@
 
     @Include('header')
 
-    <div class="page">
+    <div class="page mt-5">
         <div class="archive">
             @if (count($activities) > 0)
                 @foreach ($activities as $activity)
@@ -27,10 +27,10 @@
                             </div>
                         @endif
 
-                        <h6 style="text-align: center; font-size: 20px; padding: 15px 0 0 0; font-weight: 325;">
+                        <h6 style="text-align: center; font-size: 18px; padding: 15px 0 0 0; font-weight: 325;">
                             <a href="/activities/{{ rawurlencode($activity->title) }}"
                                 style="color: #000; text-decoration: none;">
-                                {{ $activity->title }}
+                                {{ ucfirst($activity->title) }}
                             </a>
                         </h6>
                         <p style="text-align: center; color:gray; font-size: 14px;">

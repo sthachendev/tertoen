@@ -59,7 +59,7 @@
         <div class="image-container w-100 position-relative">
             <div
                 class="position-absolute top-100 start-50 translate-middle bg-white rouned col-10 col-sm-9 col-md-8 col-lg-6">
-                <div class="d-flex flex-nowrap jusify-content-between p-4 ">
+                <div class="d-flex flex-nowrap jusify-content-between p-4">
                     {{-- <div class="">
                         <span>You are making a yearly donation of <span style = "color: #FF8B00;">BTN</span></span> <span style = "color: #FF8B00;">250</span>
                     </div>

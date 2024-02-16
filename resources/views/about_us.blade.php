@@ -24,11 +24,11 @@
 
     @Include('header')
 
-    <h4 id="title" class="text-center mb-3 mt-5" data-aos="fade-right">
+    <h4 id="title" class="text-center mb-3 mt-5" data-aos="fade-up" data-aos-duration="1000">
         BAYUEL KINZANG YOESEL CHOLING FOUNDATION
     </h4>
     <br>
-    <p class="text-secondary" data-aos="fade-right" style="margin:0 10% 0 10%;">
+    <p class="text-secondary" data-aos="fade-up" data-aos-duration="1000" style="margin:0 10% 0 10%;">
         The name of this Foundation is "Baeyuel Kuenzang Woesel Choeling Foundation " and is a Religious Organization, a
         non-profit organization established to develop as a Spiritual and Cultural Centre in order to preserve, promote
         and propagate Buddha Dharma (Vajrayana) teachings of Tertoen Drukdra Dorji Yangsi, His Holiness Trulku Ugyen
@@ -49,11 +49,12 @@
     </p>
 
     <br>
-    <h4 id="title" class="text-center my-3" data-aos="fade-right">
+    <h4 id="title" class="text-center my-3" data-aos="fade-up" data-aos-duration="1000">
         Office and Duration
     </h4>
 
-    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-right">
+    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-up"
+        data-aos-duration="1000">
         The office of the Foundation shall be located at:
         <br>Flat No. 32, Building No. 5,
         <br>Changzamtog, Thim Throm,
@@ -70,11 +71,12 @@
     </p>
 
     <br>
-    <h4 id="title" class="text-center my-3" data-aos="fade-right">
+    <h4 id="title" class="text-center my-3" data-aos="fade-up" data-aos-duration="1000">
         Purpose
     </h4>
 
-    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-right">
+    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-up"
+        data-aos-duration="1000">
         <strong>Baeyuel Kuenzang Woesel Choeling Foundation (BKWC Foundation)</strong> a non-profit Religious
         Organization,
         established for the benefit of religious institutions and spiritual heritage of Bhutan. The Foundation has been
@@ -82,10 +84,12 @@
         sentient beings for spiritual and religious development.
     </p>
     <br>
-    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-right">
+    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-up"
+        data-aos-duration="1000">
         The purpose and functions of BKWC Foundation are:
         <br>
-    <ul style="margin:0 10% 0 10%;" style="list-style-type: square;" class="text-secondary" data-aos="fade-right">
+    <ul style="margin:0 10% 0 10%;" style="list-style-type: square;" class="text-secondary" data-aos="fade-up"
+        data-aos-duration="1000">
         <li>Protect and promote the constitutional right to information, freedom of expression and religions.
         </li>
         <li>Create charity, avenue and platforms to strengthen the living conditions, employment and livelihood of poor
@@ -123,17 +127,19 @@
     </p>
 
     <br>
-    <h4 id="title" class="text-center my-3" data-aos="fade-right">
+    <h4 id="title" class="text-center my-3" data-aos="fade-up" data-aos-duration="1000">
         Objectives
     </h4>
 
-    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-right">
+    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-up"
+        data-aos-duration="1000">
         The objectives of the Foundation are to serve as a common platform & a national point of reference for all the
         Foundation members in Bhutan and to serve as a forum and point of contact on policy matters, legislation, and
         regulations affecting the religious organization and its activities & to interface with government agencies and
         other authorities on issues concerning the religious organization and it's promotions. The objectives of the
         Foundation are, inter alia, to:
-    <ul style="margin:0 10% 0 10%;" style="list-style-type: square;" class="text-secondary" data-aos="fade-right">
+    <ul style="margin:0 10% 0 10%;" style="list-style-type: square;" class="text-secondary" data-aos="fade-up"
+        data-aos-duration="1000">
         <li>Establish & promote code of ethics, formulate strategies and legislation to accelerate the promotion of
             religious organization and its activities in Bhutan;
         </li>
@@ -162,18 +168,20 @@
     </p>
 
     <br>
-    <h4 id="title" class="text-center my-3" data-aos="fade-right">
+    <h4 id="title" class="text-center my-3" data-aos="fade-up" data-aos-duration="1000">
         Scope
     </h4>
 
-    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-right">
+    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-up"
+        data-aos-duration="1000">
         The Foundation mandates to create a database of Foundation members with relevant information about their
         contact, education background and work experiences so that relevant information pertaining to the development
         and contribution towards the preservations and promotion of religious organization and its activities in Bhutan
         are maintained and any other matters of interest could be timely disseminated accordingly. The scope of
         activities of the Foundation shall comprise any activities that contribute to the achievement of the
         Foundation's purpose and objectives, and may include, without limitation:
-    <ul style="margin:0 10% 0 10%;" style="list-style-type: square;" class="text-secondary" data-aos="fade-right">
+    <ul style="margin:0 10% 0 10%;" style="list-style-type: square;" class="text-secondary" data-aos="fade-up"
+        data-aos-duration="1000">
         <li>Represent Foundation members both within and outside the country.
         </li>
         <li>Integration activities for all Foundation members;
@@ -230,66 +238,18 @@
         </li>
     </ul>
     </p>
-    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-right">
+    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary" data-aos="fade-up"
+        data-aos-duration="1000">
         The scope of BKWC Foundation envisions for the highest degree of professionalism amongst members with Code of
         Conduct that all of its members must adhere to, besides conducting several trainings and workshops to hone and
         meliorate the quality of religious organization.
     </p>
 
-    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary mt-3" data-aos="fade-right">
+    <p style="margin:0 10% 0 10%; line-height: 29px;" class="text-secondary mt-3" data-aos="fade-up"
+        data-aos-duration="1000">
         <a href="/downloads/BAYUEL.pdf">Download</a> vision and objectives of <strong>Baeyuel Kuenzang Woesel Choeling
             Foundation (BKWC Foundation)</strong> (Dzongkha Version).
     </p>
-
-    {{-- <h4 id="title" class="text-center my-3" data-aos="fade-right">
-        BOARD OF DIRECTORS
-    </h4>
-
-    <div class="text-secondary d-flex justify-content-center" data-aos="fade-right">
-        <img src="{{ asset('images/trulku.jpg') }}" alt="logo" class="mx-5 img-fluid" data-aos="fade-right"
-            data-aos-easing="ease" data-aos-duration="1000">
-    </div>
-
-    <h4 id="title" class="text-center my-3" data-aos="fade-right">
-        HE Truelku Ugyen Drodrul Thinley Kunchap Rinpoche
-    </h4>
-    <p class="text-center fs-6" data-aos="fade-right">
-        President/Patron
-    </p>
-    <br><br>
-    <div class="text-center d-flex flex-wrap justify-content-center" data-aos="fade-right">
-        <figure class="mx-3 mb-4">
-            <img src="{{ asset('images/ed.jpg') }}" alt="Executive Director">
-            <figcaption class="mt-3">
-                <strong>Executive Director</strong>
-                <br>
-                Wangchuk Rinzin
-                <br>
-                <span style="font-size: 12px">dzongkhaenglish@yahoo.com</span>
-            </figcaption>
-        </figure>
-
-        <figure class="mx-3 mb-4">
-            <img src="{{ asset('images/chair.jpg') }}" alt="Chair">
-            <figcaption class="mt-3">
-                <strong>Chair</strong>
-                <br>
-                Dr. Singye Dorji
-            </figcaption>
-        </figure>
-
-        <figure class="mx-3 mb-4">
-            <img src="{{ asset('images/treasurer.jpg') }}" alt="Treasurer">
-            <figcaption class="mt-3">
-                <strong>Treasurer</strong>
-                <br>
-                Nima Palden
-                <br>
-                <span style="font-size: 12px">npelden@yahoo.com</span>
-            </figcaption>
-        </figure>
-    </div> --}}
-
     <div class="mt-5"></div>
 
     @Include('footer')

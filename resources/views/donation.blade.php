@@ -46,10 +46,8 @@
             outline: none;
         }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
-    </head>
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
+</head>
 
 <body>
 
@@ -59,14 +57,8 @@
 
         <div class="image-container w-100 position-relative">
             <div
-                class="position-absolute top-100 start-50 translate-middle bg-white rouned col-10 col-sm-9 col-md-8 col-lg-6">
+                class="position-absolute top-100 start-50 translate-middle bg-white col-10 col-sm-9 col-md-8 col-lg-6">
                 <div class="d-flex flex-nowrap jusify-content-between p-4">
-                    {{-- <div class="">
-                        <span>You are making a yearly donation of <span style = "color: #FF8B00;">BTN</span></span> <span style = "color: #FF8B00;">250</span>
-                    </div>
-                    <div class="ms-auto" style = "color: #FF8B00;">
-                        <a > Change Amount</a>
-                    </div> --}}
                     <h4>
                         BAYUEL KINZANG YOESEL CHOLING FOUNDATION
                     </h4>
@@ -74,7 +66,7 @@
 
                 <div>
 
-                    <div class=" text-white p-4" style="background-color: #24408F;">
+                    <div class="text-white p-4" style="background-color: #24408F;">
                         <h4>Join BKWC Foundation by making a donattion.</h4>
                         <p>Yearly donations can better support our long-term projects to reach more people
                             around the world.</p>
@@ -112,7 +104,6 @@
                 </div>
                 <div class="col-4">
                     <div>
-
                         <p style="font-weight: 700;" class="text-center">BAYUEL KINZANG YOESEL CHOLING FOUNDATION</p>
                     </div>
                 </div>
@@ -275,19 +266,19 @@
                             <label class="form-check-label" for="flexCheckChecked">
                                 I hereby accept the
                             </label>
-                            <a style="font-weight: 600 !important; color: #24408F;" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">membership criteria</a>
+                            <a style="font-weight: 600 !important; color: #24408F; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal">membership criteria</a>.
                         </div>
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Membership Criteria</h1>
+                                        <h5 class="modal-title fs-5" id="exampleModalLabel">Membership Criteria</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body" style="font-size:14px;">
                                         I hereby declare that the information provided in this form is true and accurate
                                         to confirm my membership registration and to provide my support to the BKWC
                                         Foundation and that BKWC Foundation is not liable for my voluntary registration.
@@ -295,10 +286,6 @@
                                         committed to supporting and participating in its activities. I understand that
                                         my membership is voluntary, and I agree to abide by the organization’s rules and
                                         guidelines.
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger"
-                                            data-bs-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>

@@ -199,7 +199,7 @@
                         </div>
                         <div class="input-group mb-4">
                             <select class="form-control shadow-none" id="dzongkhag" name="dzongkhag" required>
-                                <option value="" disabled selected>Dzongkha</option>
+                                <option value="" disabled selected>Dzongkhag</option>
                                 <option value="Bumthang">Bumthang</option>
                                 <option value="Chhukha">Chhukha</option>
                                 <option value="Dagana">Dagana</option>

@@ -158,7 +158,7 @@
     </header>
 
     <!-- Div to be displayed -->
-    <div id="searchDiv" class="my-3">
+    <div id="searchDiv" class="my-3 mt-5">
 
         <form action="{{ url('/search') }}" method="GET" class="w-100 d-flex" style="justify-content: center;">
             @csrf

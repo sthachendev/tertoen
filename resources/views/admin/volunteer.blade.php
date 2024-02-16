@@ -136,7 +136,7 @@
                                 <td><span id="modal-village"></span></td>
                             </tr>
                             <tr>
-                                <td>Geog</td>
+                                <td>Gewog</td>
                                 <td><span id="modal-geog"></span></td>
                             </tr>
                             <tr>

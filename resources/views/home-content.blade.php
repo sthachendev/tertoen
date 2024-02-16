@@ -150,7 +150,7 @@
 
             <p id="sideheader2" class="text-center w-100 my-4 p-2 py-3 mt-3 bg-dark text-white mt-5" data-aos="fade-up"
                 data-aos-duration="1000" style="letter-spacing: 0.1em;">
-                GET INVLOVED
+                GET INVOLVED
             </p>
             <ul class="list-group list-group-flush w-100" data-aos="fade-up" data-aos-duration="1000"
                 style="font-size: 13px; text-align:left !important;">
@@ -159,7 +159,7 @@
                         Form</a>
                 </li>
                 <li class="list-group-item">
-                    <a href="/donation" class="text-dark text-decoration-none">BKWC Foundation Donation Form</a>
+                    <a href="/donation" class="text-dark text-decoration-none">BKWC Foundation Donation / membership Form</a>
                 </li>
             </ul>
 

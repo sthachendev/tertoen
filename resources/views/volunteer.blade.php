@@ -71,8 +71,8 @@
             maxlength="30">
         <br><br>
 
-        <label for="geog">Geog</label>
-        <input type="text" id="geog" name="geog" required placeholder="geog" pattern="[A-Za-z ]+"
+        <label for="geog">Gewog</label>
+        <input type="text" id="geog" name="geog" required placeholder="gewog" pattern="[A-Za-z ]+"
             maxlength="30">
         <br><br>
 

@@ -46,7 +46,7 @@
             text-align: center;
             padding: 15px 40px;
             margin-top: 5px;
-            background-color: blue;
+            background-color: #24408F;
             color: #fff;
             font-size: 14px;
             margin-left: auto;
@@ -231,7 +231,8 @@
                 </div>
             </div>
             <div class="floating-label">
-                <input placeholder="Password" type="password" name="password" id="password" autocomplete="off">
+                <input id="password" placeholder="Password" type="password" name="password" id="password"
+                    autocomplete="off">
                 <label for="password">Password:</label>
                 <div class="icon">
 
@@ -256,8 +257,28 @@
                 </div>
 
             </div>
+
+            <div id="showpassword" style="cursor: pointer; font-size:12px; margin-top:10px; margin-left:70%">Show
+                password</div>
+
             <button type="submit">Log in</button>
             <a href="/" class="discrete" style="text-decoration: none;">Go to home</a>
         </form>
     </div>
+
+    <script>
+        document.getElementById('showpassword').addEventListener('click', function() {
+                var passwordField=document.getElementById('password');
+
+                if (passwordField.type === 'password') {
+                    passwordField.type = 'text';
+                    this.textContent = 'Hide password';
+                }
+
+                else {
+                    passwordField.type = 'password';
+                    this.textContent = 'Show password';
+                }
+            });
+    </script>
 </body>

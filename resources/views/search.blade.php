@@ -16,7 +16,7 @@
 
     @Include('header')
 
-    <h4 id="title" class="text-center text-secondary" style="font-weight: 400">
+    <h4 id="title" class="text-center text-secondary mt-5" style="font-weight: 400">
         Search Results
     </h4>
 

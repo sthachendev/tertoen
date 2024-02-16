@@ -119,7 +119,7 @@
         </figure>
     </div>
 
-    {{-- <div class="mb-5 text-center d-flex flex-wrap justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+    <div class="mb-5 text-center d-flex flex-wrap justify-content-center" data-aos="fade-up" data-aos-duration="1000">
         <figure class="mx-5 mb-4">
             <img src="{{ asset('images/dp.png') }}" alt="Secretary" height="120px" width="120px">
             <figcaption class="mt-3">
@@ -148,7 +148,7 @@
                 Mr. Tandin Dorji
             </figcaption>
         </figure>
-    </div> --}}
+    </div>
 
     @Include('footer')
 

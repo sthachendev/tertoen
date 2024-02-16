@@ -201,6 +201,7 @@
             background-color: rgb(230, 229, 229);
         }
     </style>
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 
 <body style="margin-top:10px">

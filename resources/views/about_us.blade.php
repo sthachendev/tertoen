@@ -18,6 +18,7 @@
             font-size: 14px;
         }
     </style>
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 
 <body>

@@ -14,7 +14,24 @@
 
     {{-- header css --}}
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <style>
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.6);
+            /* Translucent white background */
+            backdrop-filter: blur(10px);
+            /* Apply blur effect */
+            z-index: 1000;
+            /* Ensure the sticky element is above other content */
+        }
 
+        body {
+            min-height: 300vh;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,27 +42,13 @@
     </div>
 
     <header
-        style="
-    background-color: #24408F;
+        style="background-color: #24408F;
     background-image: url('{{ asset('images/flower.png') }}'), url('{{ asset('images/flower2.png') }}');
     background-position: left top, right top;
     background-repeat: no-repeat, no-repeat;
     background-size: auto 58%, auto 55%;
     ">
-
         <div class="pt-4 pb-3">
-            <!-- header above the navs -->
-            {{-- <div class="d-flex justify-content-space-around align-items-center py-2"> --}}
-
-            {{-- <div class="me-4 text-light d-none d-sm-inline" style="font-size:12px;">
-                    <i class="fa-solid fa-phone me-1"></i>+975-77600980
-                </div>
-
-                <div class="me-3 text-light" style="font-size:12px">
-                    <i class="fa-solid fa-envelope me-1"></i>
-                    <a href="mailto:drukbkwcfoundation@gmail.com" class="text-light"
-                        style="text-decoration: none;">drukbkwcfoundation@gmail.com</a>
-                </div> --}}
             <p class="fw-bold fs-4 text-light text-center" style="letter-spacing: 0.1rem">
                 BAYUEL KINZANG YOESEL CHOLING FOUNDATION
                 <br>
@@ -54,36 +57,13 @@
                 </span>
             </p>
 
-            {{-- </div> --}}
-            <!-- social media links -->
-            {{-- <div style="background: rgba(79, 91, 158, 0.5);" class="d-flex ps-3 py-2 me-5">
-                <a href="https://www.facebook.com/profile.php?id=100093656465335&mibextid=ZbWKwL"
-                    class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
-                    style="width: 30px; height: 30px; border-radius: 50%;">
-                    <i class="fab fa-facebook"></i>
-                </a>
-
-                <a href="https://t.me/+NnaNv2k7GW9hY2Zl"
-                    class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
-                    style="width: 30px; height: 30px; border-radius: 50%;">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
-
-                <a href="https://wa.me/77600980"
-                    class="text-light me-3 d-flex align-items-center justify-content-center text-decoration-none"
-                    style="width: 30px; height: 30px; border-radius: 50%;">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div> --}}
-
         </div>
+    </header>
 
+    <div id="navbar">
         {{-- nav bar --}}
-        <nav class="navbar navbar-expand-md py-4 border-bottom" style="background: #fffF; padding: 0 10% 0 10%;"
-            {{-- style="
-        background: #fff url('{{ asset('images/wheel.png') }}') right/cover no-repeat;
-         background-size: auto 80%;
-          padding: 0 10% 0 10%;" --}}>
+        <nav id="realnav" class="navbar navbar-expand-md py-3 border-bottom"
+            style="background: transparent; padding: 0 10% 0 10%;">
 
             <img id="logo" src="{{ asset('images/logo.png') }}" alt="logo"
                 style="max-width: 7%; cursor: pointer;">
@@ -135,7 +115,7 @@
             </div>
 
             <!-- Button -->
-            <button id="toggleButton" class="btn btn-sm text-light p-2 pe-5 mt-3 mt-md-0 d-none d-md-block"
+            <button id="toggleButton" class="btn btn-sm text-light p-3 me-3 mt-3 mt-md-0 d-none d-md-block"
                 style="border-radius: 20px; font-size: 12px;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24"
                     height="24" viewBox="0 0 24 24" stroke-width="1" stroke="gray" fill="none"
@@ -152,10 +132,8 @@
                 style="border-radius:20px; font-size:12px;">
                 SUPPORT
             </button>
-
         </nav>
-
-    </header>
+    </div>
 
     <!-- Div to be displayed -->
     <div id="searchDiv" class="my-3 mt-5">
@@ -218,6 +196,26 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("navbar");
+        var realnav = document.getElementById("realnav");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+                realnav.classList.remove("border-bottom")
+            } else {
+                navbar.classList.remove("sticky");
+                realnav.classList.add("border-bottom")
+            }
+        }
     </script>
 </body>
 

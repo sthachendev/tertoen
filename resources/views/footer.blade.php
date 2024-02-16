@@ -76,16 +76,16 @@
                     <div class="d-flex justify-content-around p-3">
 
                         <div class="d-flex flex-column p-2 text-start">
-                            <h6 class="text-light mb-3 border-0 border-secondary">Contact Us</h6>
+                            <h6 class="text-light mb-3 border-0 border-secondary">CONTACT US</h6>
                             <span class="text-light text-decoration-none mb-3" style="font-size:12px">Flat No.32,
                                 Building No.5, Changzamtog, Thim Throm, Thimphu 11001,
                                 Bhutan</span>
                             <span class="text-light mb-3" style="font-size:12px">
-                                Email:
+                                EMAIL:
                                 <a href="mailto:drukbkwcfoundation@gmail.com"
                                     class="text-light text-decoration-none">drukbkwcfoundation@gmail.com</a>
                             </span>
-                            <span class="text-light text-decoration-none" style="font-size:12px">Phone:
+                            <span class="text-light text-decoration-none" style="font-size:12px">PHONE:
                                 +975-77600980</span>
                         </div>
 

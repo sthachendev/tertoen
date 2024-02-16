@@ -16,7 +16,7 @@ class CreateActivitiesTable extends Migration
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('photo')->nullable(); // 'nullable' allows null values
+            $table->binary('photo')->nullable(); // 'nullable' allows null values
             $table->text('description');
             $table->timestamps();
         });

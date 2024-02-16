@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Gallery; // Assuming your Product model resides in the 'App\Models' namespace
+use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
@@ -11,17 +13,29 @@ class GalleryController extends Controller
     {
         $image = new Gallery();
         $image->name = $request->input('name');
-        
+
         // Handle image upload if needed
         if ($request->hasFile('image')) {
+            // Get the uploaded image
             $uploadedImage = $request->file('image');
-            $imageName = time() . '.' . $uploadedImage->getClientOriginalExtension();
-            $uploadedImage->storeAs('public/gallery', $imageName);
-            $image->image = 'storage/gallery/' . $imageName;
+
+            // Compress the image
+            $compressedImage = Image::make($uploadedImage)
+                ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->encode('jpg', 75); // Specify the desired image format and quality
+
+            // Convert the compressed image to binary data
+            $binaryImageData = $compressedImage->getEncoded();
+
+            // Set the binary image data in the database
+            $image->image = $binaryImageData;
         }
-    
+
+        // Save the image
         $image->save();
-    
+
         return back()->with('success', 'Image added to gallery.');
     }
 
@@ -45,5 +59,5 @@ class GalleryController extends Controller
 
         return back()->with('success', 'Image deleted successfully');
     }
-    
+
 }

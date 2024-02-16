@@ -8,6 +8,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css'>
     {{-- gallery css --}}
     <link rel="stylesheet" href="{{ asset('css/gallery.css') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 
 <body>
@@ -23,9 +24,10 @@
                     @foreach ($images as $image)
                         <div class="card">
                             <div class="card-image">
-                                <a href="{{ asset($image->image) }}" data-fancybox="gallery"
-                                    data-caption="{{ $image->name }}">
-                                    <img src="{{ asset($image->image) }}" alt="{{ $image->name }}">
+                                <a href="data:image/jpeg;base64,{{ base64_encode($image->image) }}"
+                                    data-fancybox="gallery" data-caption="{{ $image->name }}">
+                                    <img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}"
+                                        alt="{{ $image->name }}">
                                 </a>
                             </div>
                         </div>
@@ -33,7 +35,10 @@
                 </div>
             </main>
         @else
-            No images available
+            <div class="mb-5">
+                No images available
+
+            </div>
         @endif
     </div>
 

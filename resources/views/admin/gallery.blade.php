@@ -75,9 +75,10 @@
 
                                             <div style="flex: 1;">
                                                 @if ($image->image)
-                                                    <a href="{{ asset($image->image) }}">
-                                                        <img src="{{ asset($image->image) }}"
-                                                            alt="{{ asset($image->name) }}"
+                                                    <a href="#"
+                                                        onclick="showImage('{{ base64_encode($image->image) }}')">
+                                                        <img src="data:image/jpeg;base64,{{ base64_encode($image->image) }}"
+                                                            alt="{{ $image->name }}"
                                                             style="max-width: 200px; border: 1px solid #ccc; border-radius: 4px;">
                                                     </a>
                                                 @endif
@@ -147,6 +148,14 @@
                 dialog.showModal();
             });
         });
+    </script>
+    <script>
+        function showImage(imageData) {
+            // Create a new window to display the image
+            var newWindow = window.open("", "_blank");
+            // Set the HTML content of the new window to display the image
+            newWindow.document.write('<img src="data:image/jpeg;base64,' + imageData + '" style="max-width: 100%;">');
+        }
     </script>
 
 </body>

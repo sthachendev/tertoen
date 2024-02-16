@@ -20,7 +20,7 @@
                     <div class="text-center text-secondary">
 
                         <div class="center" style="padding: 2rem; margin: 0 auto; max-width: 800px;">
-                           
+
                             @if (Session::has('success'))
                                 <div class="alert alert-success alert-dismissible fade show">
                                     {{ Session::get('success') }}
@@ -86,7 +86,7 @@
                                             <div style="flex: 1;">
                                                 @if ($activity->photo)
                                                     <a href="/activities/{{ rawurlencode($activity->title) }}">
-                                                        <img src="{{ asset($activity->photo) }}"
+                                                        <img src="data:image/jpeg;base64,{{ base64_encode($activity->photo) }}"
                                                             alt="{{ asset($activity->title) }}"
                                                             style="max-width: 100%; border: 1px solid #ccc; border-radius: 4px;">
                                                     </a>

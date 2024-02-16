@@ -7,6 +7,7 @@
     <title>Activities</title>
     {{-- activity css --}}
     <link rel="stylesheet" href="{{ asset('css/activity.css') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                         @if ($activity->photo)
                             <div style="text-align: center;">
                                 <a href="/activities/{{ rawurlencode($activity->title) }}">
-                                    <img src="{{ asset($activity->photo) }}" alt="{{ $activity->title }}"
+                                    <img src="data:image/jpeg;base64,{{ base64_encode($activity->photo) }}" alt="{{ $activity->title }}"
                                         style="max-width: 100%; display: inline-block;">
                                 </a>
                             </div>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Activity;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class ActivityController extends Controller
 {
@@ -38,25 +40,37 @@ class ActivityController extends Controller
 
     public function store(Request $request)
     {
-
         $activity = new Activity();
         $activity->title = $request->input('title');
         $activity->description = $request->input('description');
 
         // Handle image upload if needed
         if ($request->hasFile('photo')) {
+            // Get the uploaded photo
             $uploadedPhoto = $request->file('photo');
-            $photoName = time() . '.' . $uploadedPhoto->getClientOriginalExtension();
-            $uploadedPhoto->storeAs('public/photos', $photoName);
-            $activity->photo = 'storage/photos/' . $photoName;
+
+            // Compress the image
+            $compressedImage = Image::make($uploadedPhoto)
+                ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->encode('jpg', 80); // Specify the desired image format and quality
+
+            // Convert compressed image to binary data
+            $binaryImageData = $compressedImage->getEncoded();
+
+            // Store the binary data in the database
+            $activity->photo = $binaryImageData;
+
+            // Save the activity
+            $activity->save();
+
+            return back()->with('success', 'Activity Posted.');
         }
 
+        // If no photo was uploaded
         $activity->save();
-
         return back()->with('success', 'Activity Posted.');
-
-        // return response()->json(['message' => 'Posted.']);
-        // return redirect()->route('activities.index')->with('success', 'Activity added successfully!');
     }
 
     public function destroy($id)

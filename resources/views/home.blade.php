@@ -12,6 +12,7 @@
             line-height: 1.5;
         }
     </style>
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 </head>
 
 <body>

@@ -50,7 +50,7 @@
     ">
         <div class="pt-4 pb-3">
             <p class="fw-bold fs-4 text-light text-center" style="letter-spacing: 0.1rem">
-                BAYUEL KINZANG YOESEL CHOLING FOUNDATION
+                BAYUEL KINZANG WOESEL CHOLING FOUNDATION
                 <br>
                 <span class="fw-normal fs-6">
                     Fostering Happiness and Well-being

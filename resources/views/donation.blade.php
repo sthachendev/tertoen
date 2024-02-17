@@ -60,7 +60,7 @@
                 class="position-absolute top-100 start-50 translate-middle bg-white col-10 col-sm-9 col-md-8 col-lg-6">
                 <div class="d-flex flex-nowrap jusify-content-between p-4">
                     <h4>
-                        BAYUEL KINZANG YOESEL CHOLING FOUNDATION
+                        BAYUEL KINZANG WOESEL CHOLING FOUNDATION
                     </h4>
                 </div>
 
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-4">
                     <div>
-                        <p style="font-weight: 700;" class="text-center">BAYUEL KINZANG YOESEL CHOLING FOUNDATION</p>
+                        <p style="font-weight: 700;" class="text-center">BAYUEL KINZANG WOSEL CHOLING FOUNDATION</p>
                     </div>
                 </div>
                 <div class="col-4">
@@ -132,7 +132,7 @@
                 <div class="col-4">
                     <div>
 
-                        <p style="font-weight: 700;" class="text-center">BAYUEL KINZANG YOESEL CHOLING FOUNDATION</p>
+                        <p style="font-weight: 700;" class="text-center">BAYUEL KINZANG WOESEL CHOLING FOUNDATION</p>
                     </div>
                 </div>
                 <div class="col-4">

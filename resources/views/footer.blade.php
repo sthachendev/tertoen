@@ -36,7 +36,7 @@
                 <!-- Left side with text logo and social media icons -->
                 <div class="col-md-6 text-md-start mb-3 mb-md-0" id="text-logo">
                     <span class="fw-bold fs-4 text-light">
-                        BAYUEL KINZANG YOESEL CHOLING
+                        BAYUEL KINZANG WOESEL CHOLING
                         <br>
                         FOUNDATION
                     </span>
@@ -94,7 +94,7 @@
             </div>
 
             <hr>
-            <div class="text-center" style="font-size:12px"> &copy 2024 BAYUEL KINZANG YOESEL CHOLING FOUNDATION</div>
+            <div class="text-center" style="font-size:12px"> &copy 2024 BAYUEL KINZANG WOESEL CHOLING FOUNDATION</div>
         </div>
     </footer>
 

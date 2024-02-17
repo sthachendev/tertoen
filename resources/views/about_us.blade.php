@@ -26,7 +26,7 @@
     @Include('header')
 
     <h4 id="title" class="text-center mb-3 mt-5" data-aos="fade-up" data-aos-duration="1000">
-        BAYUEL KINZANG YOESEL CHOLING FOUNDATION
+        BAYUEL KINZANG WOESEL CHOLING FOUNDATION
     </h4>
     <br>
     <p class="text-secondary" data-aos="fade-up" data-aos-duration="1000" style="margin:0 10% 0 10%;">
